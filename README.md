@@ -1,2 +1,1 @@
-
-An actively developing repo for practising machine/deep learning. 
+An actively developing repo for practicing machine/deep learning, big data, and analytics.
