@@ -23,7 +23,8 @@ y=train_df['price'].values
 # regr.fit(X, y)
 # print regr.intercept_, regr.coef_
 
-print X.shape
-print y.shape
 sns.residplot(X, y, lowess=True)
-plt.show()
+
+plt.xlabel('sqft_living')
+plt.ylabel('price')
+plt.savefig('figures/residual_plot.png')

@@ -13,3 +13,4 @@ Variations of linear regression by introducing bias (a lot of jargon!):
 
 Diagnostic of linear regression:
 1. Residuals vs. Fitted: Shows if residuals 
+![Alt text](figures/residual_plot.png?raw=true "Optional Title")
