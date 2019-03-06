@@ -58,7 +58,22 @@ variables, in contrast to our approach. Facebook in a recent blog post unveiled 
 which is also a regression-based forecasting tool. But like our approach, Prophet aims 
 to be an automatic, robust forecasting tool.
 
-
-Cleaning Adjustments
-
 We also permit transformations, such as a Box-Cox transformation.
+
+(1) Model diagram
+![Alt text](images/workflow.png?raw=true "Optional Title")
+
+(2) Simple argument of simple averaging will be better than individual/more sophiscated models:
+
+X_1 ~ N(0,1), X_2 ~ N(0,2).
+
+Consider variance of X_A = 0.5 X_1 + 0.5 X_2 or generally X_C = k X_1 + (1-k) X_2
+
+(3) Ensembling of predicting methods
+
+Pretty much any reasonable model we can get our hands on! 
+Specific models include variants on many well-known approaches, 
+such as the Bass Diffusion Model, the Theta Model, Logistic models, 
+bsts, STL, Holt-Winters and other Exponential Smoothing models, 
+Seasonal and other other ARIMA-based models, Year-over-Year growth models, 
+custom models, and more.
