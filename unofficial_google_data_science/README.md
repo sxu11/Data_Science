@@ -50,6 +50,7 @@ there are other jobs calling for data scientists in Sales Ops, Marketing and Peo
 
 Our quest for robust time series forecasting at scale 
 April 17, 2017
+http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html
 
 CausalImpact is powered by bsts (“Bayesian Structural Time Series”), also from Google, 
 which is a time series regression framework using dynamic linear models fit using Markov 
