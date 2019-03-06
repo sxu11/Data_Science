@@ -41,4 +41,24 @@ if it skews towards numbers, you may want to pursue the quantitative analyst tra
 
 there are other jobs calling for data scientists in Sales Ops, Marketing and People Ops.
  
- 
+
+
+26. Crawling the internet: data science within a large engineering system
+
+
+
+
+Our quest for robust time series forecasting at scale 
+April 17, 2017
+
+CausalImpact is powered by bsts (“Bayesian Structural Time Series”), also from Google, 
+which is a time series regression framework using dynamic linear models fit using Markov 
+chain Monte Carlo techniques. The regression-based bsts framework can handle predictor 
+variables, in contrast to our approach. Facebook in a recent blog post unveiled Prophet, 
+which is also a regression-based forecasting tool. But like our approach, Prophet aims 
+to be an automatic, robust forecasting tool.
+
+
+Cleaning Adjustments
+
+We also permit transformations, such as a Box-Cox transformation.
