@@ -2,7 +2,7 @@
 
 There are a total of 26 articles there when I accessed the website on 03/05/2019.
 
-8. How to get a job at Google — as a data scientist
+**8. How to get a job at Google — as a data scientist**
 
 November 19, 2015
 
@@ -43,7 +43,7 @@ there are other jobs calling for data scientists in Sales Ops, Marketing and Peo
  
 
 
-Our quest for robust time series forecasting at scale 
+**Our quest for robust time series forecasting at scale**
 April 17, 2017
 http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html
 
@@ -75,7 +75,7 @@ Seasonal and other other ARIMA-based models, Year-over-Year growth models,
 custom models, and more.
 
 
-Fitting Bayesian structural time series with the bsts R package 
+**Fitting Bayesian structural time series with the bsts R package**
 July 11, 2017
 
 Comment: Why python does not have such a package?! (statsmethod?)
@@ -87,20 +87,45 @@ by ERIC HOLLINGSWORTH
 
 Comment: intuitive, qualitative
 
-24. Designing A/B tests in a collaboration network 
+**24. Designing A/B tests in a collaboration network** 
 January 16, 2018
 by SANGHO YOON
 http://www.unofficialgoogledatascience.com/2018/01/designing-ab-tests-in-collaboration.html
 
 Question: How to prevent potential contamination (or inconsistent treatment exposure) of samples due to network effects?
 
+![Alt text](images/Sangho3.png?raw=true "Optional Title")
 Did:
-(1) describe the unique challenges in designing experiments on developers working on GCP. 
-(2) use simulation to show how proper selection of the randomization unit can avoid estimation bias.
+- describe the unique challenges in designing experiments on developers working on GCP. 
+
+- use simulation to show how proper selection of the randomization unit can avoid estimation bias.
+
+Difference of GCP compared to other social networks:
+- A few large connected networks versus many connected components: 
+    - Methodologies for experimenting on users in social networks focus on ways to partition the overall graph into subgraphs
+    -  In GCP, there are many small connected components because our customers want to manage their own privacy and security in their projects, and do not want to share access with third parties.
+
+- Spillover effects versus contamination
+    - Experiments in social networks must care about "spillover" or influence effects from peers. 
+    - In our case, avoiding confusion is more important than estimating indirect treatment effects. For example, imagine the confusion resulting from two users who work on a shared project but see two different versions.
+
+- Method
+    - Build user graphs
+    - Stratify graphs by size and usage: 
+        Measure the size of each component by number of users and revenue 
+        and stratify graphs in number of users and revenue.
+    - Select samples and random assignment
+    - Run experiment
+
+- Results
+    - TODO: Modeling network effects
+    - TODO: Experimental power and unit of randomization
+    - TODO: Estimation bias due to unit of randomization
+    - TODO: Dynamic evolution of user collaboration network
+    
 
 
-
-25. Compliance bias in mobile experiments 
+**25. Compliance bias in mobile experiments** 
 March 22, 2018
 by DANIEL PERCIVAL
 http://www.unofficialgoogledatascience.com/2018/03/quicker-decisions-in-imperfect-mobile.html
@@ -121,7 +146,7 @@ Intent to Treat (ITT) and Treatment on the Treated (TOT) analysis
 
 TODO: propensity matching is more consistent over time than propensity weighting?!
 
-26. Crawling the internet: data science within a large engineering system
+**26. Crawling the internet: data science within a large engineering system**
 July 17, 2018
 by BILL RICHOUX
 
