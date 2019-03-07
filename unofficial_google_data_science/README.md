@@ -40,7 +40,22 @@ your talent skews toward the engineering side, you may want to pursue the standa
 if it skews towards numbers, you may want to pursue the quantitative analyst track.
 
 there are other jobs calling for data scientists in Sales Ops, Marketing and People Ops.
- 
+
+
+**Attributing a deep network’s prediction to its input features** 
+March 13, 2017
+By MUKUND SUNDARARAJAN, ANKUR TALY, QIQI YAN
+
+http://www.unofficialgoogledatascience.com/2017/03/attributing-deep-networks-prediction-to.html
+
+"This post discusses the problem of identifying input feature 
+importance for a deep network. We present a very simple method, 
+called "integrated gradients", to do this. All it involves is a 
+few calls to a gradient operator. It yields insightful results for a 
+variety of deep networks."
+
+Comment: Not very relevant to QA role?!
+
 
 
 **Our quest for robust time series forecasting at scale**
@@ -155,3 +170,5 @@ by BILL RICHOUX
 Comment: Usually not a global optimization to solve, but more of a k -> k+1 problem.
 
 TODO: look back and more summary!
+
+
