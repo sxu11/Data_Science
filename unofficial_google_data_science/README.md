@@ -15,6 +15,55 @@ way of saying things (STAR):
 
 But I do understand more introductory words could be more friendly to non-technical readers. 
 
+**Data scientist as scientist**
+October 21, 2015
+by NIALL CARDIN, OMKAR MURALIDHARAN, and AMIR NAJMI
+
+**Using Empirical Bayes to approximate posteriors for large "black box" estimators**
+November 04, 2015
+by OMKAR MURALIDHARAN
+
+- Situation:
+Many machine learning applications have some kind of regression at 
+their core, so understanding large-scale regression systems is important. 
+But doing this can be hard, for reasons not typically encountered in 
+problems with smaller or less critical regression systems. 
+    - First, systems can be theoretically intractable. Even systems based on well-understood methods usually have custom tweaks to scale or fit the problem better.
+    - Second, important systems evolve quickly, since people are constantly trying to improve them. That means any understanding of the system can become out of date.
+
+
+- Task:
+In this post, 
+we describe the challenges posed by one problem — how to get approximate 
+posteriors — and an approach that we have found useful.
+    - Wanted: approximate posteriors (not just pt estimate!)
+    
+    "Exact posteriors are hard to get, but we can get approximate ones 
+    by extending calibration, a standard way to post-process regression 
+    predictions. There are a few different methods for calibration, but 
+    all are based on the same idea: instead of using t, estimate and 
+    use  E(θ|t) . Calibration fixes aggregate bias, which lets us use 
+    methods that are efficient but biased. Calibration also scales easily 
+    and doesn’t depend on the details of the system producing t  That 
+    means it can handle the large, changing systems we have to deal with."
+    
+    TODO???
+
+- Action: Empirical Bayes posteriors in four easy steps
+    - Bin by t. (TODO: related to my PhD thesis?! )
+    - Estimate the prior distribution of  θ|t  in each bin using parametric Empirical Bayes. 
+    - Smooth across bins and check fits. 
+    - Calculate posterior quantities of interest. 
+
+- Results: 
+    - Second order calibration is a nice example of how dealing with large, complex, changing regression systems requires a different approach
+    - The resulting method has clear limitations, but is scalable, maintainable, and accurate enough to be useful.
+
+**On procedural and declarative programming in MapReduce**
+September 09, 2015
+by SEAN GERRISH and AMIR NAJMI
+
+![Alt text](images/Sawzall.png?raw=true "Optional Title")
 
 **8. How to get a job at Google — as a data scientist**
 
@@ -54,6 +103,137 @@ your talent skews toward the engineering side, you may want to pursue the standa
 if it skews towards numbers, you may want to pursue the quantitative analyst track.
 
 there are other jobs calling for data scientists in Sales Ops, Marketing and People Ops.
+
+
+
+
+**Replacing Sawzall — a case study in domain-specific language migration** 
+December 04, 2015
+by AARON BECKER
+
+Sawmill execution environment vs logs proxy execution environment
+
+
+**Variance and significance in large-scale online services (LSOS)** 
+January 14, 2016
+by AMIR NAJMI
+http://www.unofficialgoogledatascience.com/2016/01/variance-and-significance-in-large.html
+
+- In this post we explore how and why we can be “data-rich but information-poor”.
+
+
+**LSOS experiments: how I learned to stop worrying and love the variability**
+February 29, 2016
+by AMIR NAJMI
+http://www.unofficialgoogledatascience.com/2016/02/lsos-experiments-how-i-learned-to-stop.html
+
+
+
+
+**Using random effects models in prediction problems** 
+March 31, 2016
+by NICHOLAS A. JOHNSON, ALAN ZHAO, KAI YANG, SHENG WU, FRANK O. KUEHNEL, and ALI NASIRI AMINI
+
+"Random effects can be viewed as an application of empirical Bayes, and if we broaden our view 
+to that parent technique, we can find theoretical evidence of their superiority over say fixed 
+effects models. For example, the James-Stein estimator has an empirical Bayes interpretation"
+
+TODO: revisit Multi-armed bandit coding
+
+- Random Effect Models
+
+TODO: Gamma-Poisson model?
+
+- A Case Study Click-Through-Rate Prediction
+
+- Scalability studies
+
+- Conclusion
+    - provide an interpretable decomposition of variance
+    - supply predictive posterior distributions that can be used in stochastic optimization when uncertainty estimates are a critical component (e.g. bandit problems).
+    - per-segment click-through-rate models demonstrated that random effects models can deliver superior prediction accuracy. (TODO)
+
+**Estimating causal effects using geo experiments** 
+May 31, 2016
+by JOUNI KERMAN, JON VAVER, and JIM KOEHLER
+
+- Measuring the effectiveness of online ad campaigns
+    - return on investment, or Return On Ad Spend (ROAS). 
+    - the incremental ROAS, or iROAS.
+
+- Structure of a geo experiment
+
+- Designing a geo experiment: power analysis
+TODO
+
+- A model for assessing incremental return on ad spend
+
+- Example
+TODO: interesting time series!
+
+- Caveats
+
+
+
+**To Balance or Not to Balance?**
+June 30, 2016
+By IVAN DIAZ & JOSEPH KELLY
+
+- The Fundamental Problem of Causal Inference
+
+- The Propensity Score Weighted Estimator
+
+- Estimating the Propensity Score
+
+- Simulation Study
+
+TODO: come back to think about data imbalance.
+
+"To conclude, in the absence of subject-matter knowledge supporting the use of parametric 
+functional forms for the propensity score and the balancing conditions, predictive accuracy 
+should be used to select an estimator among a collection of candidates. This collection may 
+include covariate balanced estimators, and should contain flexible data-adaptive methods
+ capable of unveiling complex patterns in the data. In particular, we advocate for the use of 
+ model stacking methods such as the Super Learner algorithm implemented in the SuperLearner R 
+ package."
+
+**Mind Your Units**
+July 31, 2016
+By JEAN STEINER
+
+In summary, there are many different ways to account for the group structure when the experimental unit differs from the unit of observation.
+
+TODO: A small point. Come back later. 
+
+
+**Next generation tools for data science**
+August 31, 2016
+By DAVID ADAMS
+http://www.unofficialgoogledatascience.com/2016/08/next-generation-tools-for-data-science.html
+
+- The ability to manipulate big data is essential to our notion of data science. 
+- While MapReduce remains a fundamental tool, 
+    - the well-known Mantel-Haenszel estimator cannot be implemented in a single MapReduce
+    1. Expressing complex pipelines requires significant boilerplate, separate programs, and the "interface" between stages to be files
+    2. Write intermediate results to disk between stages of pipelines is a serious bottleneck and forces the user to hand-optimize the placement of these divisions
+    3. Performing exploratory analysis requires reading and writing to disk, which is slow
+    4. Expressing streaming pipelines (low-latency and infinite data sources) is not supported
+    5. writing multi-stage pipelines are easily to stumple upon, take e.g. trying to measure
+    the effects of a randomized experiment on ratios of metrics using Mantel-Haenszel
+    
+- Apache Spark and Google Cloud Dataflow represent two alternatives as “next generation” data processing frameworks.
+TODO
+
+**Statistics for Google Sheets**
+
+September 30, 2016
+Editor's note: The Google Sheets add-on described in this blog post is no longer supported externally by Google.
+
+By STEVEN L. SCOTT
+
+TODO: try it when have time?
+
+
 
 
 **Practical advice for analysis of large, complex data sets**
