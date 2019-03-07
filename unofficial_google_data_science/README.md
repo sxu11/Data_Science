@@ -87,6 +87,18 @@ by ERIC HOLLINGSWORTH
 
 Comment: intuitive, qualitative
 
+24. Designing A/B tests in a collaboration network 
+January 16, 2018
+by SANGHO YOON
+http://www.unofficialgoogledatascience.com/2018/01/designing-ab-tests-in-collaboration.html
+
+Question: How to prevent potential contamination (or inconsistent treatment exposure) of samples due to network effects?
+
+Did:
+(1) describe the unique challenges in designing experiments on developers working on GCP. 
+(2) use simulation to show how proper selection of the randomization unit can avoid estimation bias.
+
+
 
 25. Compliance bias in mobile experiments 
 March 22, 2018
