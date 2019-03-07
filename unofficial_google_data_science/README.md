@@ -88,6 +88,26 @@ by ERIC HOLLINGSWORTH
 Comment: intuitive, qualitative
 
 
+25. Compliance bias in mobile experiments 
+March 22, 2018
+by DANIEL PERCIVAL
+http://www.unofficialgoogledatascience.com/2018/03/quicker-decisions-in-imperfect-mobile.html
+
+Question: many users assigned the treatment do not actually experience the treatment for a long time period after the beginning of the experiment.
+
+Answer: propensity based models often provide insightful refinements to the basic ITT or TOT approaches, and would form the basis for methods that would address these complexities.
+
+TODO Rocky: prognostic score thing!
+
+Issue 1: the empirical mismatch between treatment assignment and experience
+
+Issue 2: the users experiencing treatment are not a simple random subsample of the population
+
+Issue 3: the need to make a timely decision
+
+Intent to Treat (ITT) and Treatment on the Treated (TOT) analysis
+
+TODO: propensity matching is more consistent over time than propensity weighting?!
 
 26. Crawling the internet: data science within a large engineering system
 July 17, 2018
@@ -96,3 +116,5 @@ by BILL RICHOUX
 "Type III error — giving the right answer to the wrong problem"
 
 Comment: Usually not a global optimization to solve, but more of a k -> k+1 problem.
+
+TODO: look back and more summary!
