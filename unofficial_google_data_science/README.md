@@ -43,11 +43,6 @@ there are other jobs calling for data scientists in Sales Ops, Marketing and Peo
  
 
 
-26. Crawling the internet: data science within a large engineering system
-
-
-
-
 Our quest for robust time series forecasting at scale 
 April 17, 2017
 http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html
@@ -78,3 +73,26 @@ such as the Bass Diffusion Model, the Theta Model, Logistic models,
 bsts, STL, Holt-Winters and other Exponential Smoothing models, 
 Seasonal and other other ARIMA-based models, Year-over-Year growth models, 
 custom models, and more.
+
+
+Fitting Bayesian structural time series with the bsts R package 
+July 11, 2017
+
+Comment: Why python does not have such a package?! (statsmethod?)
+
+
+Unintentional data 
+October 12, 2017
+by ERIC HOLLINGSWORTH
+
+Comment: intuitive, qualitative
+
+
+
+26. Crawling the internet: data science within a large engineering system
+July 17, 2018
+by BILL RICHOUX
+
+"Type III error — giving the right answer to the wrong problem"
+
+Comment: Usually not a global optimization to solve, but more of a k -> k+1 problem.
