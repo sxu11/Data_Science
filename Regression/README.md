@@ -68,7 +68,26 @@ So P(beta|x,y) \propto P(y|x,beta) = -1/sqrt(pi 2sigma^2) * e^[-(y_i - x_i*beta)
     - Newton's method, a root finding algorithm, maximizes a function using knowledge of its second derivative. 
 
 **Logistic regression** is given by:
+y_i = 1/[1+exp(-x_i*beta)]
 
+By transformation:
+logit(y_i)=log[y_i/(1-y_i)] = x_i * beta
+
+Optimization:
+- The regression coefficients are usually estimated using MLE.
+- Unlike linear regression with normally distributed residuals, it is not possible to find a closed-form expression for beta that maximize the likelihood function 
+- An iterative process must be used instead; for example Newton's method.
+
+Metrics, cross entropy (also called log-loss; asymmetric w.r.t. y_i and \hat y_i!):
+- H(y_i, \hat y_i) = -ylog(\hat y)-(1-y)log(1-\hat y)
+- J = \sum H(y_i, \hat y_i) / N
 
 - Why does it give (calibrated) probability?
-Consider 
+    - sklearn: "as it directly optimizes log-loss". 
+    - wiki: Denote the empirical prob of outcome i in the training set is q_i, then likelihood:
+        \prod (y_i)^(N q_i)
+        so the log-likelihood, divided by N is log[\prod (y_i)^(N q_i)]/N = \sum q_i log y_i = - H(q_i, y_i)
+    - So minimizing cross entropy HAPPENS to maximize MLE!!!
+        
+
+   
