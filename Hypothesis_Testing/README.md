@@ -35,6 +35,8 @@ Chi-square test for Independence: https://www.youtube.com/watch?v=LE3AIyY_cn8
 
 
 
+t-test for linear regression coef (df=n-2):
+https://stats.stackexchange.com/questions/286179/why-is-a-t-distribution-used-for-hypothesis-testing-a-linear-regression-coeffici
 
 
 ---

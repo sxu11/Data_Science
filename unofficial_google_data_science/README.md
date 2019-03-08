@@ -15,11 +15,58 @@ way of saying things (STAR):
 
 But I do understand more introductory words could be more friendly to non-technical readers. 
 
-**Data scientist as scientist**
+**0. Welcome to the unofficial Google data science blog** 
+August 26, 2015
+
+**1. An introduction to the Poisson bootstrap**
+August 26, 2015
+by AMIR NAJMI
+
+The bootstrap is a powerful resampling procedure which makes it easy to compute 
+the distribution of any statistical estimator. However, doing the standard bootstrap on big data 
+(i.e. which won’t fit in the memory of a single computer) can be computationally prohibitive. In 
+this post I describe a simple “statistical fix” to the standard bootstrap procedure allowing us to 
+compute bootstrap estimates of standard error in a single pass or in parallel.
+
+**2. On procedural and declarative programming in MapReduce**
+September 09, 2015
+by SEAN GERRISH and AMIR NAJMI
+
+![Alt text](images/Sawzall.png?raw=true "Optional Title")
+
+
+**3. Causal attribution in an era of big time-series data**
+September 23, 2015
+by KAY BRODERSEN
+
+CausalImpact:
+Like all state-space models, it rests on two simple equations TODO:
+y_t = Z_t^T alpha_t + esp_t
+alpha_{t+1} = T_t alpha_t + R_t eta_t
+
+**4. Experiment design and modeling for long-term studies in ads** 
+October 07, 2015
+by HENNING HOHNHOLD, DEIRDRE O'BRIEN, and DIANE TANG
+
+A/B testing has challenges and blind spots, such as:
+- the difficulty of identifying suitable metrics that give "works well" 
+a measurable meaning. This is essentially the same as finding a truly useful 
+objective to optimize.
+- capturing long-term user behavior changes that develop over time periods 
+exceeding the typical duration of A/B tests, say, over several months rather 
+than a few days.
+- accounting for effects "orthogonal" to the randomization used in experimentation. 
+For example in ads, experiments using cookies (users) as experimental units are 
+not suited to capture the impact of a treatment on advertisers or publishers nor 
+their reaction to it.
+
+**5. Data scientist as scientist**
 October 21, 2015
 by NIALL CARDIN, OMKAR MURALIDHARAN, and AMIR NAJMI
 
-**Using Empirical Bayes to approximate posteriors for large "black box" estimators**
+"Our post describes how we arrived at recent changes to design principles for the Google search page, and thus highlights aspects of a data scientist’s role which involve practicing the scientific method."
+
+**6. Using Empirical Bayes to approximate posteriors for large "black box" estimators**
 November 04, 2015
 by OMKAR MURALIDHARAN
 
@@ -59,13 +106,9 @@ posteriors — and an approach that we have found useful.
     - Second order calibration is a nice example of how dealing with large, complex, changing regression systems requires a different approach
     - The resulting method has clear limitations, but is scalable, maintainable, and accurate enough to be useful.
 
-**On procedural and declarative programming in MapReduce**
-September 09, 2015
-by SEAN GERRISH and AMIR NAJMI
 
-![Alt text](images/Sawzall.png?raw=true "Optional Title")
 
-**8. How to get a job at Google — as a data scientist**
+**7. How to get a job at Google — as a data scientist**
 
 November 19, 2015
 
@@ -107,14 +150,14 @@ there are other jobs calling for data scientists in Sales Ops, Marketing and Peo
 
 
 
-**Replacing Sawzall — a case study in domain-specific language migration** 
+**8. Replacing Sawzall — a case study in domain-specific language migration** 
 December 04, 2015
 by AARON BECKER
 
 Sawmill execution environment vs logs proxy execution environment
 
 
-**Variance and significance in large-scale online services (LSOS)** 
+**9. Variance and significance in large-scale online services (LSOS)** 
 January 14, 2016
 by AMIR NAJMI
 http://www.unofficialgoogledatascience.com/2016/01/variance-and-significance-in-large.html
@@ -122,7 +165,7 @@ http://www.unofficialgoogledatascience.com/2016/01/variance-and-significance-in-
 - In this post we explore how and why we can be “data-rich but information-poor”.
 
 
-**LSOS experiments: how I learned to stop worrying and love the variability**
+**10. LSOS experiments: how I learned to stop worrying and love the variability**
 February 29, 2016
 by AMIR NAJMI
 http://www.unofficialgoogledatascience.com/2016/02/lsos-experiments-how-i-learned-to-stop.html
@@ -130,7 +173,7 @@ http://www.unofficialgoogledatascience.com/2016/02/lsos-experiments-how-i-learne
 
 
 
-**Using random effects models in prediction problems** 
+**11. Using random effects models in prediction problems** 
 March 31, 2016
 by NICHOLAS A. JOHNSON, ALAN ZHAO, KAI YANG, SHENG WU, FRANK O. KUEHNEL, and ALI NASIRI AMINI
 
@@ -153,7 +196,7 @@ TODO: Gamma-Poisson model?
     - supply predictive posterior distributions that can be used in stochastic optimization when uncertainty estimates are a critical component (e.g. bandit problems).
     - per-segment click-through-rate models demonstrated that random effects models can deliver superior prediction accuracy. (TODO)
 
-**Estimating causal effects using geo experiments** 
+**12. Estimating causal effects using geo experiments** 
 May 31, 2016
 by JOUNI KERMAN, JON VAVER, and JIM KOEHLER
 
@@ -175,7 +218,7 @@ TODO: interesting time series!
 
 
 
-**To Balance or Not to Balance?**
+**13. To Balance or Not to Balance?**
 June 30, 2016
 By IVAN DIAZ & JOSEPH KELLY
 
@@ -197,7 +240,7 @@ include covariate balanced estimators, and should contain flexible data-adaptive
  model stacking methods such as the Super Learner algorithm implemented in the SuperLearner R 
  package."
 
-**Mind Your Units**
+**14. Mind Your Units**
 July 31, 2016
 By JEAN STEINER
 
@@ -206,7 +249,7 @@ In summary, there are many different ways to account for the group structure whe
 TODO: A small point. Come back later. 
 
 
-**Next generation tools for data science**
+**15. Next generation tools for data science**
 August 31, 2016
 By DAVID ADAMS
 http://www.unofficialgoogledatascience.com/2016/08/next-generation-tools-for-data-science.html
@@ -224,7 +267,7 @@ http://www.unofficialgoogledatascience.com/2016/08/next-generation-tools-for-dat
 - Apache Spark and Google Cloud Dataflow represent two alternatives as “next generation” data processing frameworks.
 TODO
 
-**Statistics for Google Sheets**
+**16. Statistics for Google Sheets**
 
 September 30, 2016
 Editor's note: The Google Sheets add-on described in this blog post is no longer supported externally by Google.
@@ -236,7 +279,7 @@ TODO: try it when have time?
 
 
 
-**Practical advice for analysis of large, complex data sets**
+**17. Practical advice for analysis of large, complex data sets**
 October 31, 2016
 By PATRICK RILEY
 
@@ -349,7 +392,10 @@ By PATRICK RILEY
         
    
 
-**Causality in machine learning**
+**18. Causality in machine learning**
+January 31, 2017
+DHARAN, NIALL CARDIN, TODD PHILLIPS, AMIR NAJMI
+
 Consider the following iterative updating procedure:
 
 - Definitions
@@ -368,7 +414,7 @@ logit(EY) = offset(\hat{beta}_1 X_1) + beta_pi X_pi + beta_e X_e
 
 and only update the prominence coefficient (here beta_pi and beta_e)
 
-**Attributing a deep network’s prediction to its input features** 
+**19. Attributing a deep network’s prediction to its input features** 
 March 13, 2017
 By MUKUND SUNDARARAJAN, ANKUR TALY, QIQI YAN
 
@@ -384,7 +430,7 @@ Comment: Not very relevant to QA role?!
 
 
 
-**Our quest for robust time series forecasting at scale**
+**20. Our quest for robust time series forecasting at scale**
 April 17, 2017
 http://www.unofficialgoogledatascience.com/2017/04/our-quest-for-robust-time-series.html
 
@@ -416,19 +462,21 @@ Seasonal and other other ARIMA-based models, Year-over-Year growth models,
 custom models, and more.
 
 
-**Fitting Bayesian structural time series with the bsts R package**
+**21. Fitting Bayesian structural time series with the bsts R package**
 July 11, 2017
 
 Comment: Why python does not have such a package?! (statsmethod?)
 
 
-Unintentional data 
+**22. Unintentional data** 
 October 12, 2017
 by ERIC HOLLINGSWORTH
 
 Comment: intuitive, qualitative
 
-**24. Designing A/B tests in a collaboration network** 
+
+
+**23. Designing A/B tests in a collaboration network** 
 January 16, 2018
 by SANGHO YOON
 http://www.unofficialgoogledatascience.com/2018/01/designing-ab-tests-in-collaboration.html
@@ -466,7 +514,7 @@ Difference of GCP compared to other social networks:
     
 
 
-**25. Compliance bias in mobile experiments** 
+**24. Compliance bias in mobile experiments** 
 March 22, 2018
 by DANIEL PERCIVAL
 http://www.unofficialgoogledatascience.com/2018/03/quicker-decisions-in-imperfect-mobile.html
@@ -487,7 +535,7 @@ Intent to Treat (ITT) and Treatment on the Treated (TOT) analysis
 
 TODO: propensity matching is more consistent over time than propensity weighting?!
 
-**26. Crawling the internet: data science within a large engineering system**
+**25. Crawling the internet: data science within a large engineering system**
 July 17, 2018
 by BILL RICHOUX
 
