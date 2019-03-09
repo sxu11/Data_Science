@@ -1,5 +1,6 @@
 
 sklearn collection of model selection techniques:
+https://scikit-learn.org/stable/modules/feature_selection.html
 
 - Removing features with low variance: using VarianceThreshold
     - e.g. Features w/ constant values (0 variance)
@@ -64,3 +65,6 @@ sklearn collection of model selection techniques:
                   ('classification', RandomForestClassifier())
                 ])
             clf.fit(X, y)
+            
+            
+            
