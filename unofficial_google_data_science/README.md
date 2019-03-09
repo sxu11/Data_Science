@@ -539,10 +539,104 @@ TODO: propensity matching is more consistent over time than propensity weighting
 July 17, 2018
 by BILL RICHOUX
 
-"Type III error — giving the right answer to the wrong problem"
 
-Comment: Usually not a global optimization to solve, but more of a k -> k+1 problem.
+- First alg:
+    - At a period of time tau since the last time Page j in Host i (value w_ij) is crawled,
+        the prob that it will be fresh (not have meaningful change) will be e^(-delta_ij tau)
+    - If Page j is recrawled every Delta_ij time units, its prob of being fresh
+        at a time chosen uniformly over this period will be 
+        1/Delta_ij \int_0^Delta_ij e^(-delta_ij tau)
+    - Our objective of choosing recrawl periods to maximize our freshness metric
+        maps to the following optimization problem:
+        argmax_{Delta_11, Delta_12, ...} \sum_ij w_ij/(delta_ij Delta_ij) (1 - e^(-delta_ij Delta_ij))
+        s.t. \sum_j 1/Delta_ij <= k_i (max crawling rate for the i-th host)
+             \sum_ij 1/Delta_ij <= k_0 (max global crawling rate)
+             Delta_ij > 0 
 
-TODO: look back and more summary!
+- The missing link
+    - link between our singular intention (improve our freshness metric) 
+    and the multitude of decisions to be made in the software layer 
+    (how often to crawl each web page)
+    - could not reasonably reside in memory on a normal computer
+    - employ a solver distributed across multiple machines (no host would be split across multiple machines)
+
+- Pushback
+    - black box solution: 
+        - None of the infrastructure engineers on the 
+        crawl team were convinced that they could easily understand and 
+        diagnose when or why such new optimization infrastructure would fail.
+        - problems would invariably occur, as was always the case when working
+        at the scale of Google search with a continuously evolving external 
+        environment (the web), no matter how well designed the system.
+    
+    - solving the wrong problem formulation: 
+        - Our solution approach was to freeze time, solve a static 
+        optimization problem, and then to solve again repeatedly.
+        
+        - However, in the software layer, the decision being made 
+        repeatedly was to determine the subset of web pages that should 
+        be crawled next, whenever some crawl bandwidth becomes available.
+        
+        - We would need to take the solution from our solver, and merge 
+        it in with information detailing when each URL was last crawled,
+        and then determine what URLs should be crawled next.
+        It’s arguably a minor extra step, but requires a bridge. 
+        
+        - By not matching the problem formulation in the infrastructure, 
+        we imposed an extra layer of complexity to interpret our solution.
+    
+    - substantial expansion in complexity:
+        - replace an existing heuristic implemented in a few lines of code,
+        - with some new software infrastructure, 
+        - a distributed solver for a very large convex optimization problem, 
+        — likely tens of thousands of lines of new code. 
+        - infra engineers insisted that any new, not-battle-tested system 
+            of moderate complexity would likely fail in unintended ways. 
+        - Without any indication that such proposed infrastructure would 
+        become a standard tool to solve additional problems, 
+        the crawl team was hesitant to commit to it.
+    
+    - limitations on responsiveness: 
+        - Although we referred to the solution as optimal, in reality it would 
+        never be optimal considering that the parameters feeding into such recrawl 
+        logic (the maximum crawl rates, the value of a page, the estimated change 
+        rate of a page) were all being updated asynchronously. 
+
+- Deconstructing our mistakes (1. context aware, 2. eagerness to innovate)
+    - Failing to appreciate the infrastructure engineer’s pressures and responsibilities
+    - Knowing too little of the actual, existing software implementation
+    - Seduction of familiarity
+    
+- A revised proposal: still statis
+    - Define crawl rate rho_ij = 1/Delta_ij (now as a var instead of a function of Delta_ij!)
+    - Contribution of Page i,j to the overall obj: C_ij(rho_ij)=w_ij/delta_ij rho_ij [1 - e^(-delta_ij/rho_ij)]
+    - Overall freshness obj: argmax_rho \sum_ij C_ij rho_ij
+    - Constraint: \sum_ij rho_ij <= k_i, \sum_ij rho_ij <= k_0
+    - Lagrange multiplier: 
+    J(rho) = (\sum_ij C_ij(rho_ij)) + (\sum_i lambda \sum_j rho_ij) + (lambda_0 \sum rho_ij)
+    - Setting \partial J/\partial rho_ij=0, we get C'_ij(rho*_ij) = lambda_i + lambda_0,
+    where C'(rho) = w/delta(1-e^(-delta/rho)) - w/rho e^(-delta/rho), all indexed by i,j
+    - C'(rho) monotone decreases
+    
+- New perspective on dynamical: 
+a function that tell us the value of crawling any web page at any given time
+    - Consider V(Delta) = C'(1/Delta) = w/delta(1-e^(-delta Delta)) - w/rho e^(-delta Delta)
+     monotonically increasing, starting with V(0)=0, 
+     at the optimal crawl period, it follows: V_ij(Delta*_ij) = lambda_i + lambda_0
+    - Let tau as the time that has elapsed since Page j on Host i was last crawled, consider
+    V_ij(tau) as Page i,j’s crawl value function. 
+    
+    - Non-greedy: a greedy algorithm would devote more recrawl resources towards high 
+    value pages, as lower value pages would commonly starve.
+    
+    - we can evaluate the crawl value function for each web page on a host. 
+    We can use this function to sort the web pages, and then determine which web pages 
+    should be scheduled for immediate crawl. 
+
+- Summary
+    
+    - "Type III error — giving the right answer to the wrong problem"
+
+    - Comment: Usually not a global optimization to solve, but more of a k -> k+1 problem.
 
 
