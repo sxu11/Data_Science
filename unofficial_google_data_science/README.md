@@ -48,17 +48,52 @@ alpha_{t+1} = T_t alpha_t + R_t eta_t
 October 07, 2015
 by HENNING HOHNHOLD, DEIRDRE O'BRIEN, and DIANE TANG
 
-A/B testing has challenges and blind spots, such as:
-- the difficulty of identifying suitable metrics that give "works well" 
-a measurable meaning. This is essentially the same as finding a truly useful 
-objective to optimize.
-- capturing long-term user behavior changes that develop over time periods 
-exceeding the typical duration of A/B tests, say, over several months rather 
-than a few days.
-- accounting for effects "orthogonal" to the randomization used in experimentation. 
-For example in ads, experiments using cookies (users) as experimental units are 
-not suited to capture the impact of a treatment on advertisers or publishers nor 
-their reaction to it.
+http://www.unofficialgoogledatascience.com/2015/10/experiment-design-and-modeling-for-long.html
+
+-A/B testing has challenges and blind spots, such as:
+    - long-term metric (from modeling?)
+    - long-term accumulated effect vs "primary impact of applying the A/B" 
+    (e.g. seasonality, other serving system updates)
+    - effects "orthogonal" to the randomization used in experimentation. 
+    (e.g. in ads, experiments using cookies (users) as experimental units are 
+    not suited to capture the impact of a treatment on advertisers or publishers nor 
+    their reaction to it. ???)
+
+- Long-term effects of Google’s Search Ads group focus on ads blindness and sightedness, 
+i.e. changes in users’ propensity to interact with the ads on Google’s search results page
+
+- A/A tests and long-term effects
+    - The principal challenge is now to isolate long-term effects from the primary 
+    impact of applying the A/B treatment. 
+    (due to seasonality, other serving system updates, etc.)
+        - 1st, a large number of factors can potentially affect the primary A/B effects
+        - 2nd, which ones interact with the A/B treatment (most don’t)
+    - Better experimental design, rather than fancy modeling, turned out to be 
+    the key to progress on this question
+    ![Alt text](images/blindness1.png?raw=true "Optional Title")
+    - during a post A/A comparison there are no “primary effects” and hence any 
+    differences between the test and control cohorts during the post-period are due 
+    to the preceding extended application of the A/B treatment to the experimental units.
+    - Downside: no intermediate results become available. 
+    This can be remedied by a 2nd experiment serving the treatment B,
+    where we re-randomize study participants daily.
+    ("daily re-randomization a cookie-day experiment..") 
+    
+    - We take the cookies for our cookie-day experiment from a big pool of cookies that receive 
+    the control treatment whenever they are not randomized into our cookie-day experiment — which is 
+    almost always (me: super confusing sentence!). Consequently, the longer-term aspects of their 
+    behavior are shaped by having experienced the control treatment.
+    On any given day of the treatment period, the cookie-day and cookie experiments serving B define 
+    a B/B test, which we call the cookie cookie-day (CCD) comparison.
+    - A neat aspect of CCD is that it allows us to follow user behavior changes while they are happening. 
+
+- Modeling long-term effects in ads
+    - Modeling insights: users’ attitude towards Google’s search ads is, above all, shaped by the average quality of 
+    the ads they experienced previously.
+    - More precisely, we learned that both the relevance of the ads shown and the experience after 
+    users click substantially influence their future propensity to interact with ads. 
+
+- AdWords auction ranking function?
 
 **5. Data scientist as scientist**
 October 21, 2015
@@ -484,19 +519,24 @@ http://www.unofficialgoogledatascience.com/2018/01/designing-ab-tests-in-collabo
 Question: How to prevent potential contamination (or inconsistent treatment exposure) of samples due to network effects?
 
 ![Alt text](images/Sangho3.png?raw=true "Optional Title")
-Did:
-- describe the unique challenges in designing experiments on developers working on GCP. 
+- Did:
+    - unique challenges in designing experiments on developers working on GCP. 
+    - use simulation to show how proper selection of the randomization unit can avoid estimation bias.
 
-- use simulation to show how proper selection of the randomization unit can avoid estimation bias.
+- Difference of GCP compared to other social networks:
+    - A few large connected networks versus many connected components: 
+        - Social networks: need partition the overall graph into subgraphs
+        - In GCP, many small connected components (our customers want to manage their own privacy and 
+        security in their projects, and do not want to share access with third parties).
 
-Difference of GCP compared to other social networks:
-- A few large connected networks versus many connected components: 
-    - Methodologies for experimenting on users in social networks focus on ways to partition the overall graph into subgraphs
-    -  In GCP, there are many small connected components because our customers want to manage their own privacy and security in their projects, and do not want to share access with third parties.
+- Unit of experiment: Component (a user can be associated with exactly one component)
 
 - Spillover effects versus contamination
     - Experiments in social networks must care about "spillover" or influence effects from peers. 
-    - In our case, avoiding confusion is more important than estimating indirect treatment effects. For example, imagine the confusion resulting from two users who work on a shared project but see two different versions.
+    - In our case, avoiding confusion is more important than estimating indirect treatment effects. 
+    e.g. two users who work on a shared project but see two different versions.
+        - Same user, same exposure
+        - Same proj, same exposure
 
 - Method
     - Build user graphs
@@ -507,10 +547,39 @@ Difference of GCP compared to other social networks:
     - Run experiment
 
 - Results
-    - TODO: Modeling network effects
-    - TODO: Experimental power and unit of randomization
-    - TODO: Estimation bias due to unit of randomization
-    - TODO: Dynamic evolution of user collaboration network
+    - Modeling network effects (First Principles!)
+        - Naive model: 
+            - y_k ~ mu + tau z_k
+            - mu: overall intercept
+            - tau: effect of treatment
+            - z_k: assignment of the k-th user
+            - y_k: some metric...
+        - Two aspects of network effect:
+            - Homophily: similarity within network
+            structure: component → account (billing) → project (-> user)
+                - y_i,j,k ~ c_i + a_i,j + p_i,j,k
+                - c_i: response from component i
+                - a_i,j: from account j in component i
+                - p_i,j,k: from project k in account j in component i
+            
+            - Spillover
+            structure: only model first order spillover effects
+                - y_k ~ gamma tau a_k^T Z
+                - a_k: k-th column of adjacency matrix A. 
+                - gamma: correlation strength?
+            
+            - Combined naive + spillover + homophily
+                y_i,j,k ~ (mu + tau z_k) + (gamma tau a_k^T Z) + (c_i + a_i,j + p_i,j,k)
+        
+    - Experimental power and unit of randomization
+    
+    - Estimation bias due to unit of randomization
+    
+    - Dynamic evolution of user collaboration network
+        - Create
+        - Split
+        - Remove
+        - Merge: difficult!
     
 
 
