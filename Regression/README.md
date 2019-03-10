@@ -39,6 +39,9 @@ Assumptions on e:
 - Constant variance
 - Independence
 
+![Alt text](figures/maxresdefault.jpg?raw=true "Optional Title")
+maxresdefault
+
 Usually over-determined system (n>p):
 - The goal is to find beta = argmin RSS(beta), where RSS=||y-X beta||^2
 
@@ -113,3 +116,9 @@ Metrics, cross entropy (also called log-loss; asymmetric w.r.t. y_i and \hat y_i
     
     
 http://ai.stanford.edu/~ronnyk/2009controlledExperimentsOnTheWebSurvey.pdf
+
+
+**Poisson Regression**
+log(Y) = beta X
+
+https://www.youtube.com/watch?v=pGUFQC1nCUs
