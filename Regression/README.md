@@ -105,3 +105,6 @@ Metrics, cross entropy (also called log-loss; asymmetric w.r.t. y_i and \hat y_i
     - basically, rho-squared can be interpreted like R2, but don't expect it to be as big. 
     And values from 0.2-0.4 indicate (in McFadden's words) excellent model fit.
     https://stats.stackexchange.com/questions/82105/mcfaddens-pseudo-r2-interpretation
+    
+    
+http://ai.stanford.edu/~ronnyk/2009controlledExperimentsOnTheWebSurvey.pdf
