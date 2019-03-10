@@ -70,6 +70,11 @@ So P(beta|x,y) \propto P(y|x,beta) = -1/sqrt(pi 2sigma^2) * e^[-(y_i - x_i*beta)
 - Great summary for interpreting linear regression summary() results:
 https://stats.stackexchange.com/questions/5135/interpretation-of-rs-lm-output
 
+- Key Limitations of R-squared
+    - R-squared cannot determine whether the coefficient estimates and predictions are biased, which is why you must assess the residual plots.
+    - R-squared does not indicate whether a regression model is adequate. You can have a low R-squared value for a good model, or a high R-squared value for a model that does not fit the data!
+    - The R-squared in your output is a biased estimate of the population R-squared.
+
 **Logistic regression** is given by:
 y_i = 1/[1+exp(-x_i*beta)]
 
