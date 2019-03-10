@@ -39,3 +39,11 @@ Sample Standard Deviation / sqrt(n)...
     due to a positive covariance term.
     - when r=1, becomes the geometric distribution (1-p) p^k, 
     (discrete) waiting time in a Bernoulli process
+
+- Simplest order stat
+    - Expected max y of two uniformly sampled variables (x1,x2) in [0,1]
+    - For any given Y in [0,1], 
+        Prob(y<=Y) = prob(max(x1,x2)<=Y) = prob(x1<=Y) * prob(x2<=Y) = Y^2
+        so pdf(y=Y) = 2Y,
+    - Desired expectation = \int_0^1 pdf(y=Y) Y dY 
+        = \int_0^1 2Y^2 dY = 2/3 Y^3|^1_0 = 2/3
