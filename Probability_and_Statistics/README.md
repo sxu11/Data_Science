@@ -1,7 +1,10 @@
 
-
 - Sample Standard Error, by definition, is always equal to 
 Sample Standard Deviation / sqrt(n)...
+
+- When measuring the same thing, A has var 1, B has var 2
+    - Let C = (A + b B)/(1+b), then C has var (1+2b)/(1+b)^2
+    - Take derivation w.r.t. b and let the result be 0
 
 - Beta Distribution:
     - x^(a-1) (1-x)^(b-1) / B(a, b)

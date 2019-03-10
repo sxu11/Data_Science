@@ -1,4 +1,44 @@
 
+- AIC/BIC
+
+    - Model M has k parameters, n observations X, MLE \hat theta
+    - AIC: Akaike's Information Criterion
+        - 2k - 2log(\hat L), where \hat L = likelihood of X given \hat theta
+    - BIC: Bayesian Information Criterion
+        - klog(n) - 2log(\hat L)
+        - also punish having too many data!
+        - Me: more data, the harder to explain, so smaller L, bigger -log(\hat L)?!
+    - Neither tells how good explain the data, but how balance..
+    
+    - AIC and BIC are not try to answer the same question. 
+        - AIC tries to select the model that most adequately describes an unknown, 
+        high dimensional reality. This means that reality is never in the set of candidate 
+        models that are being considered.
+        - BIC tries to find the TRUE model among the set of candidates. 
+        I find it quite odd the assumption that reality is instantiated in one of the 
+        model that the researchers built along the way. This is a real issue for BIC.
+        - AIC fails to converge in probability to the true model, whereas BIC does. 
+        - AIC is best for prediction as it is asymptotically equivalent to cross-validation.
+            BIC is best for explanation as it is allows consistent estimation of the 
+            underlying data generating process.
+        - AIC=LOO (leave-one-out) and BIC=K-fold
+        - AIC: predict. BIC: explain. 
+        https://robjhyndman.com/hyndsight/to-explain-or-predict/
+        
+        - Minimum Description length (MDL):
+            - MDL is derived directly from the BIC when 𝑁→∞ assuming i.i.d samples.
+
+- Lasso, interesting argument:
+    - "If you are only interested in prediction, then model selection doesn't help and 
+    usually hurts (as opposed to a quadratic penalty = L2 norm = ridge regression with 
+    no variable selection). LASSO pays a price in predictive discrimination for trying 
+    to do variable selection."
+    - "There is NO reason to do stepwise selection. It's just wrong."
+    - A list of potential problems with stepwise selection:
+        https://www.stata.com/support/faqs/statistics/stepwise-regression-problems/
+
+LASSO/LAR are the best automatic methods. But they are automatic methods. They let the analyst not think."
+
 sklearn collection of model selection techniques:
 https://scikit-learn.org/stable/modules/feature_selection.html
 

@@ -51,9 +51,14 @@ By:
 \hat beta = (X.transpose() X).inverse() X.transpose()  Y,
 with dimensions ((p,n)*(n,p))^{-1} * (p,n) * (n,1) = (p,1).
 
+- Regression coefficients are Gaussianly distributed:
+https://stats.stackexchange.com/questions/44838/how-are-the-standard-errors-of-coefficients-calculated-in-a-regression/44841#44841
+
 Coefficient of determination R^2 = 1 - RSS/TSS, where TSS=\sum(y- \bar y)^2
 
 Complexity: n^2*p + p^3. (fastest matrix inversion uses p^2.3 though)
+
+
 
 - Maximum likelihood estimation. 
 For any distribution of e. 
