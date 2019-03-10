@@ -67,6 +67,9 @@ So P(beta|x,y) \propto P(y|x,beta) = -1/sqrt(pi 2sigma^2) * e^[-(y_i - x_i*beta)
     - Gradient descent maximizes a function using knowledge of its derivative. 
     - Newton's method, a root finding algorithm, maximizes a function using knowledge of its second derivative. 
 
+- Great summary for interpreting linear regression summary() results:
+https://stats.stackexchange.com/questions/5135/interpretation-of-rs-lm-output
+
 **Logistic regression** is given by:
 y_i = 1/[1+exp(-x_i*beta)]
 
@@ -91,3 +94,9 @@ Metrics, cross entropy (also called log-loss; asymmetric w.r.t. y_i and \hat y_i
         
 
    
+- McFadden's pseudo-R squared:
+    - pseudo-R squared = 1 - log(L_c)/log(L_null)
+    http://thestatsgeek.com/2014/02/08/r-squared-in-logistic-regression/
+    - basically, rho-squared can be interpreted like R2, but don't expect it to be as big. 
+    And values from 0.2-0.4 indicate (in McFadden's words) excellent model fit.
+    https://stats.stackexchange.com/questions/82105/mcfaddens-pseudo-r2-interpretation
