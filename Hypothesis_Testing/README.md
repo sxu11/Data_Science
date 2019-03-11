@@ -75,12 +75,48 @@ Chi-square test for Independence: https://www.youtube.com/watch?v=LE3AIyY_cn8
         - "The equivalence between likelihood ratio test and F-test for testing
             variance component in a balanced oneway random effects model"
             
+- ANOVA
+    - Analysis of Variance (ANOVA) is a statistical method used to test differences 
+    between two or more means. It may seem odd that the technique is called "Analysis 
+    of Variance" rather than "Analysis of Means." As you will see, the name is 
+    appropriate because inferences about means are made by analyzing variance.
+    - ANOVA for means assume equal variances...
     
+- Levene's Test (for unequal variances)
+    - ANOVA (|x_ij - \bar x_j|)
 
     
     
 http://blog.minitab.com/blog/adventures-in-statistics-2/understanding-analysis-of-variance-anova-and-the-f-test
 https://statisticsbyjim.com/regression/interpret-f-test-overall-significance-regression/
 
+
+- Run Test for randomness:
+    - https://www.youtube.com/watch?v=J7QmQruh8WA
+    
+    
+- Wald Test: Ancestor for all??
+    - https://en.wikipedia.org/wiki/Wald_test
+    - "Since the parameter 𝛽𝑗 is estimated using Maxiumum Likelihood Estimation, 
+    MLE theory tells us that it is asymptotically normal and hence we can use 
+    the large sample Wald confidence interval to get the usual 𝛽𝑗 ± 𝑧 𝑆𝐸(𝛽𝑗)"
+    - 
+
+
+- Cheating Test (Randomized ResponseSurvey (RRS)):
+    -  (1) the respondent is faced with a sensitive question; 
+    - (2) the respondent is then given some randomization device such as a coin; 
+    - (3) the respondent flips the coin without showing it to the interviewer. 
+    If the coin lands heads, then the respondent answers “yes” to the question. 
+    If the coin lands tails, then the respondent answers truthfully to the question; 
+    and, after all data has been collected, 
+    - (4) one computes the desired probability of a person’s correct response 
+    being “yes”, using a certain probability formula. 
+    
+    - https://lib.bsu.edu/beneficencepress/mathexchange/02-01/londino.pdf
+
 ---
 https://www.youtube.com/watch?v=UaptUhOushw
+
+
+

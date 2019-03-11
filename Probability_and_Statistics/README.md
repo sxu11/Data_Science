@@ -2,6 +2,13 @@
 - Sample Standard Error, by definition, is always equal to 
 Sample Standard Deviation / sqrt(n)...
 
+- Poisson Distribution
+    - P_pois(k) = lambda^k e^-lambda / k!
+    - Can be derived from Binomial P_bino(k) = C^k_n p^k(1-p)^(n-k)
+        - It turns out the Poisson distribution is just a special case of 
+        the binomial — where the number of trials is large, and 
+        the probability of success in any given one is small.
+
 - When measuring the same thing, A has var 1, B has var 2
     - Let C = (A + b B)/(1+b), then C has var (1+2b)/(1+b)^2
     - Take derivation w.r.t. b and let the result be 0
@@ -47,3 +54,28 @@ Sample Standard Deviation / sqrt(n)...
         so pdf(y=Y) = 2Y,
     - Desired expectation = \int_0^1 pdf(y=Y) Y dY 
         = \int_0^1 2Y^2 dY = 2/3 Y^3|^1_0 = 2/3
+        
+        
+        
+- Bayesian posterior with truncated normal prior
+https://math.stackexchange.com/questions/573694/bayesian-posterior-with-truncated-normal-prior
+
+- Conjugate Priors: Beta and Normal.
+https://math.mit.edu/~dav/05.dir/class15-slides-all.pdf
+
+
+- Sum of several exponential distribution is the Gamma distribution
+
+- Gamma function:
+    - Gamma(z) = \int_0^inf x^{z-1} e^{-x} dx
+    - A smooth curve that connects the points (x, y) given by y = (x − 1)! 
+    at the positive integer values for x.
+    
+- Hypergeometric distribution 
+    - A discrete probability distribution that describes the probability of 
+    k successes (random draws for which the object drawn has a specified feature) 
+    in n draws, without replacement, from a finite population of size 
+    N that contains exactly K objects with that feature, wherein each draw is 
+    either a success or a failure. In contrast, the binomial distribution 
+    describes the probability of k successes in n draws with replacement.
+    - pmf: C(K,k) * C(N-k,n-k) / C(N,n)
