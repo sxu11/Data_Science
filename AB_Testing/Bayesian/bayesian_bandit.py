@@ -23,6 +23,8 @@ class Bandit:
         return np.random.rand() < self.p
 
     def sample(self):
+        # Draw samples from a Beta distribution.
+        # Probability of probability p...
         return np.random.beta(self.a, self.b)
 
     def update(self, x):
@@ -43,11 +45,11 @@ def experiment():
 
     sample_points = [5, 10, 20, 50, 100, 200, 500, 1000, 1500, 1999]
     for i in range(NUM_TRIALS):
-        bestb = None
+        bestb = None        # best bandit (best curr guessed p)
         maxsample = -1
         allsamples = []
-        for b in bandits:
-            sample = b.sample()
+        for b in bandits: #
+            sample = b.sample() # get one guess of 'p'
             allsamples.append("%4.f" % sample)
             if sample > maxsample:
                 maxsample = sample
@@ -56,7 +58,7 @@ def experiment():
             print "current samples: %s" % allsamples
             plot(bandits, i)
 
-        x = bestb.pull()
+        x = bestb.pull() # only try the best, and updates it's p guessibility...
         bestb.update(x)
 
 if __name__ == '__main__':
