@@ -43,6 +43,9 @@ maybe tomorrow there are new ways of "abnormal"..)
     - Parameter fitting: analytic solution, when compared to no corr
         - Inverse more computations
         - must have n > p (else the p-by-p Sigma is invertible)
-    
+
+
+![Alt text](images/PCA_HIV.png?raw=true "Optional Title")
+
 ---
 Andrew Ng's videos of machine learning, 15.1-15.8
