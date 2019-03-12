@@ -696,7 +696,8 @@ a function that tell us the value of crawling any web page at any given time
     V_ij(tau) as Page i,j’s crawl value function. 
     
     - Non-greedy: a greedy algorithm would devote more recrawl resources towards high 
-    value pages, as lower value pages would commonly starve.
+    value pages, as lower value pages would commonly starve. 
+    (TODO: why is not greedy?)
     
     - we can evaluate the crawl value function for each web page on a host. 
     We can use this function to sort the web pages, and then determine which web pages 
