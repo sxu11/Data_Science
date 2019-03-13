@@ -47,5 +47,9 @@ maybe tomorrow there are new ways of "abnormal"..)
 
 ![Alt text](images/PCA_HIV.png?raw=true "Optional Title")
 
+
+- Linear discriminant analysis (TODO)
+
+
 ---
 Andrew Ng's videos of machine learning, 15.1-15.8
