@@ -50,6 +50,11 @@ maybe tomorrow there are new ways of "abnormal"..)
 
 - Linear discriminant analysis (TODO)
 
+- t-SNE
+    - https://www.youtube.com/watch?v=NEaUSP4YerM
+
+![Alt text](images/Dim_Reduce.png?raw=true "Optional Title")
+
 
 ---
 Andrew Ng's videos of machine learning, 15.1-15.8
