@@ -33,3 +33,25 @@ For example, even though pandas could handle empty dataframe, but could not hand
 5. Check pandas dataframe have the same subset/order in the train/test sets. 
 This brings me some trouble before using Transformer. As sklearn does not care about column names, but the order of columns.
 
+
+
+Good lecture on Unit test!
+- Why:
+    - Write service code first! 
+    - https://www.youtube.com/watch?v=Eu35xM76kKY
+
+- Principle:
+    - triangulation (beginner!)
+        - naive pass the 1 test!
+        - add 2nd test for triangulation!
+    - obvious impl
+    - fake it until you make it! 
+    
+    - As a communication channel 
+    (get really into the nitty-gritty of how exactly a function works!)
+    
+    - https://www.youtube.com/watch?v=XsFQEUP1MxI
+    
+- Details:
+
+    
