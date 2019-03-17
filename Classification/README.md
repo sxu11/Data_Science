@@ -33,3 +33,15 @@
         - resampling the unbalanced training set into not one balanced set, 
         but several. Running an ensemble of classifiers on these sets could 
         produce a much better result than one classifier alone. 
+        
+        
+        
+- SVM Hyperparameters
+    - Kernel selects the type of hyperplane used to separate the data. 
+    - The higher the Gamma value (non linear hyperplanes) it tries to exactly fit the training data set 
+    - Degree used when kernel is set to ‘poly’. 
+    - C is the penalty parameter of the error term. It controls the trade off between 
+    smooth decision boundary and classifying the training points correctly.
+    - https://medium.com/all-things-ai/in-depth-parameter-tuning-for-svc-758215394769
+        
+    

@@ -53,5 +53,14 @@ Good lecture on Unit test!
     - https://www.youtube.com/watch?v=XsFQEUP1MxI
     
 - Details:
+    - TODO
+    
+    
+Google Tech Talk!
+- https://www.youtube.com/watch?v=wEhu57pih5w
+
+- There is no secret to writing tests...
+  only secrets to writing testable code!
+
 
     
