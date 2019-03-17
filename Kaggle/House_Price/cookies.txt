@@ -1,0 +1,23 @@
+# HTTP Cookie File downloaded with cookies.txt by Genuinous @genuinous
+# This file can be used by wget, curl, aria2c and other standard compliant tools.
+# Usage Examples:
+#   1) wget -x --load-cookies cookies.txt "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data"
+#   2) curl --cookie cookies.txt "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data"
+#   3) aria2c --load-cookies cookies.txt "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data"
+#
+www.kaggle.com	FALSE	/	TRUE	1537767215	ai_user	cN7TB|2017-09-24T05:33:35.174Z
+.kaggle.com	TRUE	/	FALSE	1821591224	optimizelyEndUserId	oeu1506231224199r0.5522960458492319
+.kaggle.com	TRUE	/	FALSE	2137387400	intercom-id-koj6gxx6	5fa918f7-8d79-4f88-a1be-4ba2963e0c61
+.kaggle.com	TRUE	/	FALSE	1528691484	__utmz	158690720.1510421266.4.3.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)
+.kaggle.com	TRUE	/	FALSE	1828306585	optimizelySegments	%7B%225684981785%22%3A%22false%22%2C%225646609362%22%3A%22direct%22%2C%225668443100%22%3A%22gc%22%7D
+.kaggle.com	TRUE	/	FALSE	1828306585	optimizelyBuckets	%7B%7D
+.kaggle.com	TRUE	/	FALSE	1544858728	intercom-lou-koj6gxx6	1
+.kaggle.com	TRUE	/	FALSE	1576390724	_ga	GA1.2.1910199230.1506231215
+www.kaggle.com	FALSE	/	TRUE	0	__RequestVerificationToken	rEbB__MclwERHZhm3Np_j915Gc4i_6WHvfOtex7zSbi9VTQ19sfM_td6tEFU-K-PBJop0YHFaUhxQhcPSAOUh-7fAnY1
+.kaggle.com	TRUE	/	FALSE	0	__utmc	158690720
+.kaggle.com	TRUE	/	TRUE	1575995422	.ASPXAUTH	4A5DF97F087DD08B8E129B7B7682A25164408D749670D1786AA98895168BB205143C79EE1CEA03E4B63E01774A0FB9517E18B735893F4737423EE563029177A6C7B7B85CE8443BC9A9A2DF5692D5BFF58419FAFC
+.kaggle.com	TRUE	/	FALSE	1575995484	__utma	158690720.1910199230.1506231215.1512882691.1512923484.7
+.www.kaggle.com	TRUE	/	FALSE	0	ARRAffinity	2ad2004f97d0f65a6d67ea296a82ebedfe0a2a323ee4b7590d5c0355f02a74fb
+.kaggle.com	TRUE	/	FALSE	1513405124	_gid	GA1.2.533235812.1513311437
+www.kaggle.com	FALSE	/	TRUE	1513320526	ai_session	YmJSm|1513318726486.425|1513318726486.425
+.kaggle.com	TRUE	/	FALSE	1513923528	intercom-session-koj6gxx6	K3NsRW1jYjd2aE8zM1dhajFob2ZPblUyMjRBc0h1VlExNUNCNlJNaGxJczhWdmdiTEZtY2RCbGdYUnVrVGdoYi0tT3RocGV3OVlESEtmWkNOZ1dqc2dZZz09--0191a9dcf927a6a270658737e8dd31e3be4ed91b
