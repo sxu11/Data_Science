@@ -59,6 +59,19 @@ Previous efforts of OrderRex* using co-occurrence of clinical items within 24 ho
             resulting in N_j=[0,0]
             - Solution: subtract each user j's rating for movie i by its average rating!
 
+
+- Metrics
+    - Precision at k is the proportion of recommended items in the top-k set that are relevant
+
+    - Recall at k is the proportion of relevant items found in the top-k recommendations
+    
+    - One example of defining 'relevant' is :
+    To do the translation we will assume that any true rating above 3.5 corresponds to a relevant item 
+    and any true rating below 3.5 is irrelevant. A relevant item for a specific user-item pair means that 
+    this item is a good recommendation for the user in question.
+    
+    - https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54
+
 ---
 
 *OrderRex: clinical order decision support and outcome predictions by data-mining electronic medical records
