@@ -1,0 +1,502 @@
+003 60.92 Legislators
+004 70.45 Chief Executives and General Administrators, Public Administration
+005 51.23 Administrators and Officials, Public Administration
+006 53.66 Administrators, Protective Service
+007 58.94 Financial Managers
+008 53.85 Personnel and Labor Relations Managers
+009 62.73 Purchasing Managers
+013 59.46 Managers, Marketing, Advertising, and Public Relations
+014 63.70 Administrators, Education and Related Fields
+015 69.22 Managers, Medicine and Health
+016 38.53 Managers, Properties and Real Estate
+017 52.85 Postmasters and Mail Superintendents
+018 49.14 Funeral Directors
+019 50.64 Managers and Administrators, n.e.c.
+023 65.38 Accountants and Auditors
+024 48.40 Underwriters
+025 48.40 Other Financial Officers
+026 60.65 Management Analysts
+027 43.32 Personnel, Training, and Labor Relations Specialists
+028 41.85 Purchasing Agents and Buyers, Farm Products
+029 50.11 Buyers, Wholesale and Retail Trade Except Farm Products
+033 40.99 Purchasing Agents and Buyers
+034 51.43 Business and Promotion Agents
+035 46.85 Construction Inspectors
+036 50.06 Inspectors and Compliance Officers, Except Construction
+037 48.72 Management Related Occupations, n.e.c.
+043 73.15 Architects
+044 71.60 Aerospace Engineers
+045 60.94 Metallurgical and Materials Engineers
+046 59.62 Mining Engineers
+047 65.85 Petroleum Engineers
+048 73.30 Chemical Engineers
+049 63.30 Nuclear Engineers
+053 68.81 Civil Engineers
+054 59.54 Agricultural Engineers
+055 64.19 Electrical and Electronic Engineers
+056 62.26 Industrial Engineers
+057 64.14 Mechanical Engineers
+058 59.46 Marine and Naval Architects
+059 70.69 Engineers, n.e.c.
+063 51.35 Surveyors and Mapping Scientists
+064 73.70 Computer Systems Analysts and Scientists
+065 53.04 Operations and Systems Researchers and Analysts
+066 44.47 Actuaries
+067 55.57 Statisticians
+068 63.46 Mathematical Scientists, n.e.c.
+069 73.48 Physicists and Astronomers
+073 73.33 Chemists, Except Biochemists
+074 63.39 Atmospheric and Space Scientists
+075 69.75 Geologists and Geodesists
+076 73.09 Physical Scientists, n.e.c.
+077 58.00 Agricultural and Food Scientists
+078 73.14 Biological and Life Scientists
+079 54.53 Forestry and Conservation Scientists
+083 64.27 Medical Scientists
+084 86.05 Physicians
+085 71.79 Dentists
+086 62.28 Veterinarians
+087 67.16 Optometrists
+088 64.86 Podiatrists
+089 50.44 Health Diagnosing Practitioners, n.e.c.
+095 66.48 Registered Nurses
+096 68.32 Pharmacists
+097 55.61 Dietitians
+098 62.99 Inhalation Therapists
+099 55.97 Occupational Therapists
+103 61.45 Physical Therapists
+104 60.76 Speech Therapists
+105 62.36 Therapists, n.e.c.
+106 61.20 Physicians' Assistants
+113 73.51 Earth, Environmental, and Marine Science Teachers
+114 73.51 Biological Science Teachers
+115 73.51 Chemistry Teachers
+116 73.51 Physics Teachers
+117 73.51 Natural Science Teachers, n.e.c.
+118 73.51 Psychology Teachers
+119 73.51 Economics Teachers
+123 73.51 History Teachers
+124 73.51 Political Science Teachers
+125 73.51 Sociology Teachers
+126 73.51 Social Science Teachers, n.e.c.
+127 73.51 Engineering Teachers
+128 73.51 Mathematical Science Teachers
+129 73.51 Computer Science Teachers
+133 73.51 Medical Science Teachers
+134 73.51 Health Specialties Teachers
+135 73.51 Business, Commerce, and Marketing Teachers
+136 73.51 Agriculture and Forestry Teachers
+137 73.51 Art, Drama, and Music Teachers
+138 73.51 Physical Education Teachers
+139 73.51 Education Teachers
+143 73.51 English Teachers
+144 73.51 Foreign Language Teachers
+145 73.51 Law Teachers
+146 73.51 Social Work Teachers
+147 73.51 Theology Teachers
+148 73.51 Trade and Industrial Teachers
+149 73.51 Home Economics Teachers
+153 73.51 Teachers, Postsecondary, n.e.c.
+154 73.51 Postsecondary Teachers, Subject Not Specified
+155 54.93 Teachers, Prekindergarten and Kindergarten
+156 64.08 Teachers, Elementary School
+157 66.37 Teachers, Secondary School
+158 65.06 Teachers, Special Education
+159 45.73 Teachers, n.e.c.
+163 56.69 Counselors, Educational and Vocational
+164 54.42 Librarians
+165 52.04 Archivists and Curators
+166 62.86 Economists
+167 69.39 Psychologists
+168 60.75 Sociologists
+169 65.02 Social Scientists, n.e.c.
+173 52.32 Urban Planners
+174 51.50 Social Workers
+175 38.06 Recreation Workers
+176 68.96 Clergy
+177 43.55 Religious Workers, n.e.c.
+178 74.77 Lawyers
+179 71.49 Judges
+183 63.05 Authors
+184 54.31 Technical Writers
+185 46.53 Designers
+186 46.56 Musicians and Composers
+187 57.62 Actors and Directors
+188 52.38 Painters, Sculptors, Craft-Artists, and Artist Printmakers
+189 45.11 Photographers
+193 53.49 Dancers
+194 35.55 Artists, Performers, and Related Workers, n.e.c.
+195 59.75 Editors and Reporters
+197 47.52 Public Relations Specialists
+198 54.81 Announcers
+199 64.66 Athletes
+203 68.40 Clinical Laboratory Technologists and Technicians
+204 52.23 Dental Hygienists
+205 52.28 Health Record Technologists and Technicians
+206 58.48 Radiologic Technicians
+207 59.98 Licensed Practical Nurses
+208 56.67 Health Technologists and Technicians, n.e.c.
+213 59.88 Electrical and Electronic Technicians
+214 39.74 Industrial Engineering Technicians
+215 54.12 Mechanical Engineering Technicians
+216 48.25 Engineering Technicians, n.e.c.
+217 51.49 Drafting Occupations
+218 36.10 Surveying and Mapping Technicians
+223 32.35 Biological Technicians
+224 37.61 Chemical Technicians
+225 44.38 Science Technicians, n.e.c.
+226 61.02 Airplane Pilots and Navigators
+227 64.76 Air Traffic Controllers
+228 42.83 Broadcast Equipment Operators
+229 60.51 Computer Programmers
+233 48.25 Tool Programmers, Numerical Control
+234 56.53 Legal Assistants
+235 40.85 Technicians, n.e.c.
+243 44.15 Supervisors and Proprietors, Sales Occupations
+253 44.85 Insurance Sales Occupations
+254 48.82 Real Estate Sales Occupations
+255 52.80 Securities and Financial Services Sales Occupations
+256 39.29 Advertising and Related Sales Occupations
+257 32.32 Sales Occupations, Other Business Services
+258 53.16 Sales Engineers
+259 48.54 Sales Representatives, Mining, Manufacturing, and Wholesale
+263 34.24 Sales Workers, Motor Vehicles and Boats
+264 30.22 Sales Workers, Apparel
+265 27.67 Sales Workers, Shoes
+266 30.62 Sales Workers, Furniture and Home Furnishings
+267 30.79 Sales Workers, Radio, TV, Hi-Fi, and Appliances
+268 31.58 Sales Workers, Hardware and Building Supplies
+269 29.93 Sales Workers, Parts
+274 32.03 Sales Workers, Other Commodities
+275 33.60 Sales Counter Clerks
+276 29.45 Cashiers
+277 22.37 Street and Door-To-Door Sales Workers
+278 19.38 News Vendors
+283 32.09 Demonstrators, Promoters and Models, Sales
+284 39.19 Auctioneers
+285 35.58 Sales Support Occupations, n.e.c.
+303 50.54 Supervisors, General Office
+304 53.99 Supervisors, Computer Equipment Operators
+305 51.83 Supervisors, Financial Records Processing
+306 48.55 Chief Communications Operators
+307 41.72 Supervisors, Distribution, Scheduling, and Adjusting Clerks
+308 50.32 Computer Operators
+309 40.09 Peripheral Equipment Operators
+313 46.08 Secretaries
+314 46.70 Stenographers
+315 40.03 Typists
+316 48.79 Interviewers
+317 31.93 Hotel Clerks
+318 35.34 Transportation Ticket and Reservation Agents
+319 39.02 Receptionists
+323 34.50 Information Clerks, n.e.c.
+325 30.60 Classified-Ad Clerks
+326 34.86 Correspondence Clerks
+327 31.03 Order Clerks
+328 36.08 Personnel Clerks, Except Payroll and Timekeeping
+329 29.28 Library Clerks
+335 36.06 File Clerks
+336 31.49 Records Clerks
+337 46.64 Bookkeepers, Accounting and Auditing Clerks
+338 41.71 Payroll and Timekeeping Clerks
+339 30.89 Billing Clerks
+343 27.90 Cost and Rate Clerks
+344 34.83 Billing, Posting, and Calculating Machine Operators
+345 35.34 Duplicating Machine Operators
+346 36.02 Mail Preparing and Paper Handling Machine Operators
+347 38.51 Office Machine Operators, n.e.c.
+348 39.55 Telephone Operators
+349 45.13 Telegraphers
+353 33.08 Communications Equipment Operators, n.e.c.
+354 42.20 Postal Clerks, Excluding Mail Carriers
+355 47.04 Mail Carriers, Postal Service
+356 31.94 Mail Clerks, Excluding Postal Service
+357 22.30 Messengers
+359 34.76 Dispatchers
+363 41.81 Production Coordinators
+364 32.71 Traffic, Shipping and Receiving Clerks
+365 27.43 Stock and Inventory Clerks
+366 34.00 Meter Readers
+368 27.69 Weighers, Measurers, and Checkers
+369 34.98 Samplers
+373 42.89 Expediters
+374 23.56 Material Recording, Scheduling and Distributing Clerks, n.e.c.
+375 47.27 Insurance Adjusters, Examiners, and Investigators
+376 40.36 Investigators and Adjusters, Except Insurance
+377 46.10 Eligibility Clerks, Social Welfare
+378 24.30 Bill and Account Collectors
+379 33.88 General Office Clerks
+383 43.28 Bank Tellers
+384 43.14 Proofreaders
+385 41.18 Data-Entry Keyers
+386 37.50 Statistical Clerks
+387 43.06 Teachers' Aides
+389 33.03 Administrative Support Occupations, n.e.c.
+403 23.25 Launderers and Ironers
+404 29.98 Cooks, Private Household
+405 33.93 Housekeepers and Butlers
+406 29.25 Child Care Workers, Private Household
+407 22.77 Private Household Cleaners and Servants
+413 59.87 Supervisors, Firefighting and Fire Prevention Occupations
+414 61.84 Supervisors, Police and Detectives
+415 37.64 Supervisors, Guards
+416 60.42 Fire Inspection and Fire Prevention Occupations
+417 52.87 Firefighting Occupations
+418 59.99 Police and Detectives, Public Service
+423 48.32 Sheriffs, Bailiffs, and Other Law Enforcement Officers
+424 39.81 Correctional Institution Officers
+425 32.33 Crossing Guards
+426 42.11 Guards and Police, Excluding Public Service
+427 37.16 Protective Service Occupations
+433 35.16 Supervisors, Food Preparation and Service Occupations
+434 24.53 Bartenders
+435 28.08 Waiters and Waitresses
+436 30.76 Cooks, Except Short Order
+437 28.07 Short-Order Cooks
+438 23.02 Food Counter, Fountain and Related Occupations
+439 24.08 Kitchen Workers, Food Preparation
+443 21.12 Waiters'/Waitresses' Assistants
+444 16.78 Miscellaneous Food Preparation Occupations
+445 44.56 Dental Assistants
+446 50.86 Health Aids, Except Nursing
+447 41.71 Nursing Aides, Orderlies and Attendants
+448 35.62 Supervisors, Cleaning and Building Service Workers
+449 20.05 Maids and Housemen
+453 22.33 Janitors and Cleaners
+454 27.59 Elevator Operators
+455 32.34 Pest Control Occupations
+456 36.75 Supervisors, Personal Service Occupations
+457 35.71 Barbers
+458 36.08 Hairdressers and Cosmetologists
+459 25.33 Attendants, Amusement and Recreation Facilities
+463 28.63 Guides
+464 20.03 Ushers
+465 42.05 Public Transportation Attendants
+466 27.26 Baggage Porters and Bellhops
+467 46.50 Welfare Service Aides
+468 35.76 Child Care Workers, Except Private Household
+469 25.41 Personal Service Occupations, n.e.c.
+473 40.39 Farmers, Except Horticultural
+474 37.39 Horticultural Specialty Farmers
+475 47.59 Managers, Farms, Except Horticultural
+476 47.59 Managers, Horticultural Specialty Farms
+477 44.17 Supervisors, Farm Workers
+479 23.28 Farm Workers
+483 30.52 Marine Life Cultivation Workers
+484 25.83 Nursery Workers
+485 36.10 Supervisors, Related Agricultural Occupations
+486 28.57 Groundskeepers and Gardeners, Except Farm
+487 21.16 Animal Caretakers, Except Farm
+488 30.69 Graders and Sorters, Agricultural Products
+489 49.45 Inspectors, Agricultural Products
+494 43.53 Supervisors, Forestry and Logging Workers
+495 38.54 Forestry Workers, Except Logging
+496 31.10 Timber Cutting and Logging Occupations
+497 42.63 Captains and Other Officers, Fishing Vessels
+498 34.46 Fishers
+499 22.78 Hunters and Trappers
+503 49.82 Supervisors, Mechanics and Repairers
+505 39.64 Automobile Mechanics, Except Apprentices
+506 34.05 Automobile Mechanic Apprentices
+507 43.64 Bus, Truck, and Stationary Engine Mechanics
+508 52.86 Aircraft Engine Mechanics
+509 27.75 Small Engine Repairers
+514 31.43 Automobile Body and Related Repairers
+515 52.86 Aircraft Mechanics, Excluding Engine
+516 44.82 Heavy Equipment Mechanics
+517 36.41 Farm Equipment Mechanics
+518 29.51 Industrial Machinery Repairers
+519 25.88 Machinery Maintenance Occupations
+523 38.88 Electronic Repairers, Communications and Industrial Equipment
+525 51.43 Data Processing Equipment Repairers
+526 37.61 Household Appliance and Power Tool Repairers
+527 41.28 Telephone Line Installers and Repairers
+529 36.38 Telephone Installers and Repairers
+533 38.53 Miscellaneous Electrical and Electronic Equipment Repairers
+534 42.00 Heating, Air Conditioning, and Refrigeration Mechanics
+535 35.49 Camera, Watch, and Musical Instrument Repairers
+536 39.17 Locksmiths and Safe Repairers
+538 36.57 Office Machine Repairers
+539 35.67 Mechanical Controls and Valve Repairers
+543 39.02 Elevator Installers and Repairers
+544 42.75 Millwrights
+547 31.55 Specified Mechanics and Repairers, n.e.c.
+549 43.53 Not Specified Mechanics and Repairers Construction Trades (39.28)
+553 50.33 Supervisors, Brickmasons, Stonemasons, and Title Setters
+554 50.33 Supervisors, Carpenters and Related Work
+555 50.33 Supervisors, Electricians and Power Transmission Installers
+556 50.33 Supervisors, Painters, Paperhangers, and Plasterers
+557 50.33 Supervisors, Plumbers, Pipefitters, and Steamfitters
+558 54.05 Supervisors, n.e.c.
+563 36.08 Brickmasons and Stonemasons, Except Apprentices
+564 26.08 Brickmasons and Stonemasons Apprentices
+565 31.36 Tile Setters, Hard and Soft
+566 34.38 Carpet Installers
+567 38.92 Carpenters, Except Apprentices
+569 28.92 Carpenter Apprentices
+573 34.26 Drywall Installers
+575 51.27 Electricians, Except Apprentices
+576 40.60 Electrician Apprentices
+577 46.25 Electrical Power Installers and Repairers
+579 33.91 Painters, Construction and Maintenance
+583 31.14 Paperhangers
+584 34.91 Plasterers
+585 44.75 Plumbers, Pipefitters, and Steamfitters, Except Apprentices
+587 35.49 Plumber, Pipefitter, and Steamfitter Apprentices
+588 37.50 Concrete and Terrazzo Finishers
+589 30.26 Glaziers
+593 32.59 Insulation Workers
+594 33.00 Paving, Surfacing, and Tamping Equipment Operators
+595 37.16 Roofers
+596 35.34 Sheetmetal Duct Installers
+597 42.96 Structural Metal Workers
+598 39.82 Drillers, Earth
+599 35.67 Construction Trades, n.e.c.
+613 44.07 Supervisors, Extractive Occupations
+614 41.50 Drillers, Oil Well
+615 37.50 Explosives Workers
+616 35.06 Mining Machine Operators
+617 28.76 Mining Occupations, n.e.c.
+633 47.07 Supervisors, Production Occupations
+634 42.93 Tool and Die Makers, Except Apprentices
+635 32.93 Tool and Die Maker Apprentices
+636 31.47 Precision Assemblers, Metal
+637 46.93 Machinists, Except Apprentices
+639 35.31 Machinist Apprentices
+643 39.64 Boilermakers
+644 25.87 Precision Grinders, Fitters, and Tool Sharpeners
+645 38.41 Patternmakers and Model Makers, Metal
+646 29.52 Lay-Out Workers
+647 44.55 Precious Stones and Metals Workers
+649 38.17 Engravers, Metal
+653 50.33 Sheet Metal Workers, Except Apprentices
+654 37.95 Sheet Metal Worker, Apprentices
+655 35.71 Miscellaneous Precision Metal Workers
+656 38.66 Patternmakers and Model Makers, Wood
+657 43.81 Cabinet Makers and Bench Carpenters
+658 38.94 Furniture and Wood Finishers
+659 36.31 Miscellaneous Precision Woodworkers
+666 36.08 Dressmakers
+667 42.48 Tailors
+668 34.75 Upholsterers
+669 36.14 Shoe Repairers
+673 36.62 Apparel and Fabric Patternmakers
+674 34.05 Miscellaneous Precision Apparel and Fabric Workers
+675 32.00 Hand Molders and Shapers, Except Jewelers
+676 27.59 Patternmakers, Lay-Out Workers, and Cutters
+677 37.73 Optical Goods Workers
+678 55.93 Dental Laboratory and Medical Appliance Technicians
+679 31.58 Bookbinders
+683 28.16 Electrical and Electronic Equipment Assemblers
+684 30.00 Miscellaneous Precision Workers, n.e.c.
+686 34.66 Butchers and Meat Cutters
+687 34.86 Bakers
+688 29.57 Food Batchmakers
+689 41.80 Inspectors, Testers, and Graders
+693 39.64 Adjusters and Calibrators
+694 38.49 Water and Sewage Treatment Plant Operators
+695 43.28 Power Plant Operators
+696 40.16 Stationary Engineers
+699 42.89 Miscellaneous Plant and System Operators
+703 41.30 Lathe and Turning Machine Set-Up Operators
+704 37.24 Lathe and Turning Machine Operators
+705 32.03 Milling and Planing Machine Operators
+706 34.80 Punching and Stamping Press Machine Operators
+707 39.56 Rolling Machine Operators
+708 36.95 Drilling and Boring Machine Operators
+709 22.75 Grinding, Abrading, Buffing, and Polishing Machine Operators
+713 35.61 Forging Machine Operators
+714 39.52 Numerical Control Machine Operators
+715 29.17 Miscellaneous Metal, Plastic, Stone, and Glass Working
+717 37.83 Fabricating Machine Operators, n.e.c.
+719 33.74 Molding and Casting Machine Operators
+723 36.20 Metal Plating Machine Operators
+724 39.93 Heat Treating Equipment Operators
+725 34.76 Miscellaneous Metal and Plastic Processing Machine
+726 37.02 Wood Lathe, Routing and Planing Machine Operators
+727 33.77 Sawing Machine Operators
+728 29.89 Shaping and Joining Machine Operators
+729 26.74 Nailing and Tacking Machine Operators
+733 22.18 Miscellaneous Woodworking Machine Operators
+734 39.47 Printing Machine Operators
+735 39.85 Photoengravers and Lithographers
+736 40.21 Typesetters and Compositors
+737 37.03 Miscellaneous Printing Machine Operators
+738 30.41 Winding and Twisting Machine Operators
+739 34.50 Knitting, Looping, Taping, and Weaving Machine Operators
+743 28.10 Textile Cutting Machine Operators
+744 27.50 Textile Sewing Machine Operators
+745 32.57 Shoe Machine Operators
+747 28.54 Pressing Machine Operators
+748 31.85 Laundering and Dry Cleaning Machine Operators
+749 33.29 Miscellaneous Textile Machine Operators
+753 35.16 Cementing and Gluing Machine Operators
+754 25.11 Packaging and Filling Machine Operators
+755 32.09 Extruding and Forming Machine Operators
+756 25.82 Mixing and Blending Machine Operators
+757 29.71 Separating, Filtering, and Clarifying Machine Operators
+758 29.74 Compressing and Compacting Machine Operators
+759 29.83 Painting and Paint Spraying Machine Operators
+763 22.73 Roasting and Baking Machine Operators, Food
+764 24.67 Washing, Cleaning, and Pickling Machine Operators
+765 28.09 Folding Machine Operators
+766 40.26 Furnace, Kiln, and Oven Operators, Except Food
+768 30.57 Crushing and Grinding Machine Operators
+769 33.61 Slicing and Cutting Machine Operators
+773 37.94 Motion Picture Projectionists
+774 37.98 Photographic Process Machine Operators
+777 29.86 Miscellaneous and Not Specified Machine Operators, n.e.c.
+779 32.84 Machine Operators, Not Specified
+783 41.89 Welders and Cutters
+784 33.09 Solderers and Blazers
+785 35.28 Assemblers
+786 25.56 Hand Cutting and Trimming Occupations
+787 33.11 Hand Molding, Casting, and Forming Occupations
+789 31.31 Hand Painting,Coating, and Decorating Occupations
+793 42.13 Hand Engraving and Printing Occupations
+794 35.29 Hand Grinding and Polishing Occupations
+795 32.36 Miscellaneous Hand Working Occupations
+796 35.53 Production Inspectors, Checkers, and Examiners
+797 38.38 Production Testers
+798 41.52 Production Samplers and Weighers
+799 32.80 Graders and Sorters, Except Agricultural
+803 37.93 Supervisors, Motor Vehicle Operators
+804 30.23 Truck Drivers, Heavy
+805 29.91 Truck Drivers, Light
+806 23.87 Driver-Sales Workers
+808 32.07 Bus Drivers
+809 28.15 Taxicab Drivers and Chauffeurs
+813 21.22 Parking Lot Attendants
+814 24.89 Motor Transportation Occupations, n.e.c.
+823 42.16 Railroad Conductors and Yardmasters
+824 41.34 Locomotive Operating Occupations
+825 40.09 Railroad Brake, Signal, and Switch Operators
+826 47.01 Rail Vehicle Operators, n.e.c.
+828 54.48 Ship Captains and Mates, Except Fishing Boats
+829 34.16 Sailors and Deckhands
+833 42.61 Marine Engineers
+834 27.58 Bridge, Lock and Lighthouse Tenders
+843 44.63 Supervisors, Material Moving Equipment Operators
+844 50.00 Operating Engineers
+845 33.62 Longshore Equipment Operators
+848 36.22 Hoist and Winch Operators
+849 42.34 Crane and Tower Operators
+853 37.73 Excavating and Loading Machine Operators
+855 34.46 Grader, Dozer, and Scraper Operators
+856 35.16 Industrial Truck and Tractor Equipment Operators
+859 26.75 Miscellaneous Material Moving Equipment Operators
+863 26.77 Supervisors, Handlers, Equipment Cleaners, and Laborers, n.e.c.
+864 33.38 Helpers, Mechanics and Repairers
+865 29.50 Helpers, Construction Trades
+866 37.86 Helpers, Surveyor
+867 38.02 Helpers, Extractive Occupations
+869 36.43 Construction Laborers
+873 30.80 Production Helpers
+875 27.72 Garbage Collectors
+876 37.26 Stevedores
+877 22.95 Stock Handlers and Baggers
+878 36.70 Machine Feeders and Offbearers
+883 26.86 Freight, Stock, and Material Handlers, n.e.c.
+885 21.44 Garage and Service Station Related Occupations
+887 19.38 Vehicle Washers and Equipment Cleaners
+888 22.05 Hand Packers and Packagers
