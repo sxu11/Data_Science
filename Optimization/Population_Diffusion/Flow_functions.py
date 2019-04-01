@@ -518,3 +518,15 @@ def interpolate_t_fitted(parout, h_list, t_list, target_sample, target_t,sd=1,sd
     err_out, fval=error_term(emtj[:,:,emtj.shape[2]-1],target_sample,sdkern)
     return emtj[:,:,emtj.shape[2]-1], fval
 
+if __name__ == '__main__':
+    mt=MALA_tester()
+    plt.hist(mt[0,0,:], bins=50,alpha=0.5,normed=True)
+    plt.hist(np.random.normal(size=mt.shape[2],scale=1.0),bins=50,alpha=0.5,normed=True)
+    plt.show()
+
+    # parin=parset(potin=reluPotential(),K=100,D=2,scale=0.2)
+    # samples=np.random.normal(size=(2,100))+5.0
+    # W_opt, b_opt, g_opt, p_opt = logP_cdopt(parin,samples,niter=100,stepsize=0.1,burnin=20,ns=100)
+    # x_test = np.linspace(-5,15,num=50)
+    # y_test = np.linspace(-5,15,num=50)
+    # plot_flow_both(x_test,y_test,parin)
