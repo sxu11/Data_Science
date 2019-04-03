@@ -185,7 +185,18 @@ import pandas as pd
 
 df = pd.read_csv('Qiu/vl_embedding.csv', sep='\t', header=None)
 data = np.array([df[0].values, df[1].values])
-print data
+
+
+'''
+Down sampling
+'''
+sample_size = 1000
+print data.shape
+idx = np.random.randint(data.shape[1], size=sample_size)
+data_sample = data[:, idx]
+plt.scatter(data_sample[0], data_sample[1])
+plt.show()
+print data_sample.shape
 
 '''
 Run potential learning
@@ -193,10 +204,66 @@ Run potential learning
 sdin=1.0
 
 np.random.seed(0)
-parout_2 = Tf.run_all([data, data],
+parout_2 = Tf.run_all([data_sample, data_sample],
                       [0, 1], Tf.relu_pack, sdin=sdin,
-                      dtin=0.1, tau=0.7, n1=5,n2=5,lossfun=Tf.sinkhorn_error, Knum=500,
+                      dtin=0.1, tau=0.7, n1=1,n2=5,lossfun=Tf.sinkhorn_error, Knum=500,
                       eps_base=0.1,scale_base=0.00001)
+print parout_2
+paras = parout_2[1]
+print paras.potin['name']
+print paras.potin['trajectory']
+print paras.potin['potential_grad']
+print paras.potin['drift']
+print paras.potin['potential']
+print paras.potin['simulate']
+print paras.potin['backprop']
+
+print "paras.W_matrix.shape:", paras.W_matrix.shape
+pd.DataFrame(paras.W_matrix).to_csv('data/W_matrix.csv', index=False)
+# print paras.W_matrix #
+
+print "paras.b_vec.shape:", paras.b_vec.shape
+pd.DataFrame(paras.W_matrix).to_csv('data/b_matrix.csv', index=False)
+# print paras.b_vec
+
+print "paras.g_vec.shape:", paras.g_vec.shape
+pd.DataFrame(paras.W_matrix).to_csv('data/g_matrix.csv', index=False)
+# print paras.g_vec
+
+print "paras.W_sqsum.shape:", paras.W_sqsum.shape
+# print paras.W_sqsum
+
+print "paras.b_sqsum.shape:", paras.b_sqsum.shape
+# print paras.b_sqsum
+
+print "paras.g_sqsum.shape:", paras.g_sqsum.shape
+# print paras.g_sqsum
+
+print "len(paras.fvvec)", len(paras.fvvec)
+# print paras.fvvec
+
+print "len(paras.tvec)", len(paras.tvec)
+# print paras.tvec
+
+print "paras.tnow:", paras.tnow
+
+
+def f(x):
+    return -1 * np.log(1 + np.exp(x))
+
+def plot_flow_pot(pot,x,y,W,b,g):
+    z=np.zeros((x.shape[0],y.shape[0]))
+    for i in xrange(x.shape[0]):
+        ptv=np.vstack((np.full(y.shape[0],x[i]),y))
+        flowtmp= np.sum(f(np.dot(W,ptv)+b[:,np.newaxis])*g[:,np.newaxis],0)
+        z[:,i]=flowtmp
+    plt.pcolormesh(x,y,np.exp(z))
+    CS = plt.contour(x,y,z)
+    plt.clabel(CS, inline=1, fontsize=10)
+
+x_test = np.linspace(-25,25,num=51)
+y_test = np.linspace(-25,25,num=51)
+plot_flow_pot(paras.potin,x_test,y_test,paras.W_matrix,paras.b_vec,paras.g_vec)
 
 plt.show()
 

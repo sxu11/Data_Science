@@ -367,6 +367,7 @@ def get_grad_marginal(parin,pp,p_target,theano_pack,time,dt,sd,sdkern,lossfun):
     return gall, fval, result_final, err_out
 
 def run_grad_theano(datin,parin,hpars,maxit,theano_pack,lossfun,tau=0,burnin=10,ctk=True,debug=True,ada_val=0):
+    debug = False
     # if debug:
     #     f = FloatProgress(min=0, max=maxit)
     #     display(f)
@@ -398,6 +399,7 @@ def run_grad_theano(datin,parin,hpars,maxit,theano_pack,lossfun,tau=0,burnin=10,
     return parin
 
 def run_grad_theano_list(datin_list,parin,hpars,maxit,theano_pack,lossfun, tau=0, burnin=10,ctk=True,delta=False,debug=True,ada_val=0):
+    debug = False
     # if debug:
     #     f = FloatProgress(min=0, max=maxit)
     #     display(f)
