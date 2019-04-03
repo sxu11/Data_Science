@@ -223,11 +223,11 @@ pd.DataFrame(paras.W_matrix).to_csv('data/W_matrix.csv', index=False)
 # print paras.W_matrix #
 
 print "paras.b_vec.shape:", paras.b_vec.shape
-pd.DataFrame(paras.W_matrix).to_csv('data/b_matrix.csv', index=False)
+pd.DataFrame(paras.b_vec).to_csv('data/b_vec.csv', index=False)
 # print paras.b_vec
 
 print "paras.g_vec.shape:", paras.g_vec.shape
-pd.DataFrame(paras.W_matrix).to_csv('data/g_matrix.csv', index=False)
+pd.DataFrame(paras.g_vec).to_csv('data/g_vec.csv', index=False)
 # print paras.g_vec
 
 print "paras.W_sqsum.shape:", paras.W_sqsum.shape
@@ -247,11 +247,40 @@ print "len(paras.tvec)", len(paras.tvec)
 
 print "paras.tnow:", paras.tnow
 
+# paras = {}
+# W_matrix = pd.read_csv('data/W_matrix.csv').values
+# b_vec = pd.read_csv('data/b_matrix.csv').values
+# g_vec = pd.read_csv('data/g_matrix.csv').values
 
+
+import scipy as sp
 def f(x):
     return -1 * np.log(1 + np.exp(x))
 
-def plot_flow_pot(pot,x,y,W,b,g):
+def ilogit(x):
+    return sp.special.expit(x)
+
+def fp(x):
+    return -1 * ilogit(x)
+
+def drift_fun(W,b,g,y):
+    scalings = fp(np.dot(W,y)+b[:,np.newaxis])*g[:,np.newaxis] #matrix, K by num_samp
+    return np.dot(np.transpose(W),scalings)
+
+def plot_flow_par(x,y,W,b,g):
+    u=np.zeros((x.shape[0],y.shape[0]))
+    v=np.zeros((x.shape[0],y.shape[0]))
+    nrm=np.zeros((x.shape[0],y.shape[0]))
+    for i in xrange(x.shape[0]):
+        ptv=np.vstack((np.full(y.shape[0],x[i]),y))
+        flowtmp=drift_fun(W,b,g,ptv)
+        u[:,i]=flowtmp[0,:]
+        v[:,i]=flowtmp[1,:]
+        nrm[:,i]=np.sqrt(np.sum(flowtmp**2.0,0))
+    #plt.quiver(x,y,u,v)
+    plt.streamplot(x,y,u,v,density=1.0,linewidth=3*nrm/np.max(nrm))
+
+def plot_flow_pot(x,y,W,b,g):
     z=np.zeros((x.shape[0],y.shape[0]))
     for i in xrange(x.shape[0]):
         ptv=np.vstack((np.full(y.shape[0],x[i]),y))
@@ -261,10 +290,14 @@ def plot_flow_pot(pot,x,y,W,b,g):
     CS = plt.contour(x,y,z)
     plt.clabel(CS, inline=1, fontsize=10)
 
+W_matrix = paras.W_matrix
+b_vec = paras.b_vec
+g_vec = paras.g_vec
+
 x_test = np.linspace(-25,25,num=51)
 y_test = np.linspace(-25,25,num=51)
-plot_flow_pot(paras.potin,x_test,y_test,paras.W_matrix,paras.b_vec,paras.g_vec)
-
+plot_flow_pot(x_test,y_test,W_matrix,b_vec,g_vec)
+plot_flow_par(x_test,y_test,W_matrix,b_vec,g_vec)
 plt.show()
 
 # x_test = np.linspace(-8,2,num=50)
