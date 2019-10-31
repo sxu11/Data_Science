@@ -190,7 +190,7 @@ data = np.array([df[0].values, df[1].values])
 '''
 Down sampling
 '''
-sample_size = 1000
+sample_size = 100
 print data.shape
 idx = np.random.randint(data.shape[1], size=sample_size)
 data_sample = data[:, idx]
@@ -205,8 +205,8 @@ sdin=1.0
 
 np.random.seed(0)
 parout_2 = Tf.run_all([data_sample, data_sample],
-                      [0, 1], Tf.relu_pack, sdin=sdin,
-                      dtin=0.1, tau=0.7, n1=1,n2=5,lossfun=Tf.sinkhorn_error, Knum=500,
+                      [0, 1], Tf.lin_pack, sdin=sdin,
+                      dtin=0.1, tau=0.7, n1=1,n2=3,lossfun=Tf.sinkhorn_error, Knum=500,
                       eps_base=0.1,scale_base=0.00001)
 print parout_2
 paras = parout_2[1]

@@ -114,6 +114,8 @@ def Tpot_lin(x_p, w, b, g):
 def Tdrift_lin(x_p, w, b, g):
     ksum = T.sum(Tpot_lin(x_p,w,b,g))
     driftterm = theano.gradient.grad(ksum, x_p)
+    print 'driftterm:', driftterm
+    quit()
     return driftterm
 
 def Tsimul_lin(z, x_p, w, b, g, dt):
@@ -307,6 +309,12 @@ def plot_flow_pot(pot,x,y,W,b,g):
     z=np.zeros((x.shape[0],y.shape[0]))
     for i in xrange(x.shape[0]):
         ptv=np.vstack((np.full(y.shape[0],x[i]),y))
+
+        print 'W.shape:', W.shape
+        print 'b.shape:', b.shape
+        print 'g.shape:', g.shape
+        quit()
+
         flowtmp= pot['potential'](ptv,W,b[:,np.newaxis],g[:,np.newaxis])
         z[:,i]=flowtmp
     plt.pcolormesh(x,y,np.exp(z))
