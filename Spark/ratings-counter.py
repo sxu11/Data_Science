@@ -1,4 +1,9 @@
 
+"""
+Could also do `spark-submit ratings-counter.py` in cmd.
+"""
+
+
 from pyspark import SparkConf, SparkContext
 
 

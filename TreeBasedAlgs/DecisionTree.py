@@ -12,7 +12,14 @@ class Node:
         self._false = None
         pass
 
-    def build(self, df):
+    def split(self, df):
+        """
+        Steps:
+        Find the best question to ask, based on current df
+            (1) best feature
+            (2) best split
+        Then under a question, split the node into two branches
+        """
 
         pass
 
@@ -22,7 +29,34 @@ class DecisionTree:
         self._df = df
 
     def build(self):
-        self._root.build(self._df)
+        self._root.split(self._df)
+
+
+
+
+
+"""
+Input: two numbers (test if a>=b); two object (test if a==b) 
+Output: bool True/False
+"""
+def ask(a, b):
+    if isinstance(a, float) and isinstance(b, float):
+        return ask_numeric(a, b)
+    elif isinstance(a, str) and isinstance(b, str):
+        return ask_categorical(a, b)
+    else:
+        raise Exception("ask not implemented!")
+
+def ask_numeric(a, b):
+    return a >= b
+
+def ask_categorical(a, b):
+    return a == b
+
+
+def test_question():
+    print question("a", "a")
+
 
 def test():
     df = pd.DataFrame({'Color': ['Green', 'Yellow', 'Red', 'Red', 'Yellow'],
@@ -33,4 +67,4 @@ def test():
     print decisionTree._root._trueBranch
 
 if __name__ == '__main__':
-    test()
+    test_question()
