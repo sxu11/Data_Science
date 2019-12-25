@@ -7,6 +7,9 @@ from xgboost import XGBClassifier
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
+
+from classes import DecisionTree
+
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -56,17 +59,26 @@ def getAucsWithNSeeds(clf, n, params=None):
         ress.append(res)
     return ress
 
-def main():
-    aucsSklearnDt = getAucsWithNSeeds(DecisionTreeClassifier, n=100)
-    plt.hist(aucsSklearnDt)
-    plt.xlabel(np.mean(aucsSklearnDt))
+def plotHist(dataVect, xlabel=""):
+    plt.hist(dataVect)
+    plt.xlabel(xlabel)
     plt.show()
 
+
+def main():
+    aucsDt = getAucsWithNSeeds(DecisionTree, n=1)
+    print(aucsDt)
+    quit()
+    plotHist(aucsDt, np.mean(aucsDt))
+
+    aucsSklearnDt = getAucsWithNSeeds(DecisionTreeClassifier, n=100)
+    plotHist(aucsSklearnDt, np.mean(aucsSklearnDt))
+
     params = {"n_estimators": 1, "max_features": None}
-    aucSklearnRf = getAucsWithNSeeds(RandomForestClassifier, n=100, params=params)
-    plt.hist(aucSklearnRf)
-    plt.xlabel(np.mean(aucSklearnRf))
-    plt.show()
+    aucsSklearnRf = getAucsWithNSeeds(RandomForestClassifier, n=100, params=params)
+    plotHist(aucsSklearnRf, np.mean(aucsSklearnRf))
+
+
 
 
 if __name__ == '__main__':
