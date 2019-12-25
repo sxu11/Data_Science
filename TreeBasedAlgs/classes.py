@@ -1,19 +1,22 @@
 
 import numpy as np
+import logging
 
 class DecisionTree:
     def __init__(self, random_state=0):
         # self._root = Node(df.values, df.dtypes)
         self._random_state = random_state
+        self.depth = 0
 
     def fit(self, X_train, y_train):
         self._root = Node(X_train, y_train) # TODO: for now, only handle numeric!
-        self._root.grow(random_state = self._random_state)
+        self.depth = self._root.grow(random_state = self._random_state)
 
     def predict(self, X_test):
         ress = []
         for i in range(X_test.shape[0]):
             res = self._root.predict(X_test[i, :])
+
             ress.append(res)
         return ress
 
@@ -53,6 +56,7 @@ class Node:
         # maxGainAllCols = 0
         # maxGainArgColAllCols = None
         # maxGainArgSplitAllCols = None
+
         maxGainDict = {"gain":0}
 
         for col in range(self.colNum):
@@ -66,18 +70,25 @@ class Node:
                 # maxGainAllCols, maxGainArgSplitAllCols = maxGainCurCol, maxGainArgSplitCurCol
                 # maxGainArgColAllCols = col
                 maxGainDict = curColMaxGainDict
+                maxGainDict["col"] = col
 
         if maxGainDict["gain"] > self.MIN_GAIN_TO_SPLIT:
-            self._growCol = maxGainArgColAllCols # TODO
-            self._growSplit = maxGainArgSplitAllCols
+            self._splitFeat = maxGainDict["col"] # TODO
+            self._splitVal = maxGainDict["split"]
 
             self._trueNode = Node(maxGainDict["xtrainTrue"], maxGainDict["ytrainTrue"])
-            self._trueNode.grow()
+            trueDepth = self._trueNode.grow()
             self._falseNode = Node(maxGainDict["xtrainFalse"], maxGainDict["ytrainFalse"])
-            self._falseNode.grow()
+            falseDepth = self._falseNode.grow()
+
+            return max([trueDepth, falseDepth]) + 1
+        else:
+            return 1
+
 
     def calcGiniImpurity(self, aVec):
-        return 1 - np.square(aVec).sum()
+        p = aVec.sum() / float(len(aVec))
+        return 1 - p*p - (1-p)*(1-p) #np.square(aVec).sum()
 
     def getSplitDictBySplitVal(self, splitFeat, splitVal):
         # TODO: numeric for now
@@ -130,6 +141,7 @@ class Node:
                 # maxGain = curGain
                 # maxGainSplit = split
                 maxGainDict = curSplitDict
+                maxGainDict["split"] = split
 
         return maxGainDict #maxGain, maxGainSplit
 

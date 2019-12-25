@@ -12,18 +12,20 @@ from classes import DecisionTree
 
 import numpy as np
 
+import logging
+
 import matplotlib.pyplot as plt
 
-def test():
-    df = pd.DataFrame({'Color': ['Green', 'Yellow', 'Red', 'Red', 'Yellow'],
-                       'Diam': [3, 3, 1, 1, 3],
-                       'Label': ['Apple', 'Apple', 'Grape', 'Grape', 'Lemon']})
-
-    decisionTree = DecisionTree(df)
-    decisionTree.build()
-
-    print(decisionTree._root._trueNode.df)
-    print(decisionTree._root._falseNode.df)
+# def test():
+#     df = pd.DataFrame({'Color': ['Green', 'Yellow', 'Red', 'Red', 'Yellow'],
+#                        'Diam': [3, 3, 1, 1, 3],
+#                        'Label': ['Apple', 'Apple', 'Grape', 'Grape', 'Lemon']})
+#
+#     decisionTree = DecisionTree(df)
+#     decisionTree.build()
+#
+#     print(decisionTree._root._trueNode.df)
+#     print(decisionTree._root._falseNode.df)
 
 def loadXy():
     dataset = load_breast_cancer()
@@ -40,10 +42,13 @@ def getAuc(clf, verbose=False):
 
     clf.fit(X_train, y_train)
 
+    logging.warning(clf.depth)
+
     if verbose:
         print(clf)
 
     y_pred = clf.predict(X_test)
+
     accuracy = roc_auc_score(y_test, y_pred)
     return (accuracy)
 
