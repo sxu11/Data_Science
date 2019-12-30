@@ -23,7 +23,7 @@ def getGift(ind, familySize):
     }
     return gifts[ind]
 
-def getTotalPenalty(familyAssign): # length 100
+def getTotalPenalty(familyAssign, verbose=False): # length 100
     """
     Summing up the costs of Christmas Eve (d=1), to d=100
 
@@ -31,6 +31,8 @@ def getTotalPenalty(familyAssign): # length 100
     :return:
     """
     NdList = getNdList(familyAssign)
+    if verbose:
+        print("NdList[:10] inside getTotalPenalty():", NdList[:10])
 
     totPenalty = 0
     for d in range(1,101):
@@ -68,7 +70,7 @@ def getFamilySizes():
         familySizes.append(familySize)
     return familySizes
 
-def getTotalGift(familyAssign):
+def getTotalGift(familyAssign, verbose=False):
 
     # NdList = getNdList(familyAssign)
     familyDataNp = readDataDf().values
@@ -92,14 +94,14 @@ def getNdList(familyAssign): # familyAssigment: from 1 to 100
         NdList[familyAssign[i]-1] += familySizes[i]
     return NdList
 
-def getTotalScore(familyAssign): # list of assignment
+def getTotalScore(familyAssign, verbose=False): # list of assignment
 
 
-    totPenalty = getTotalPenalty(familyAssign)
+    totPenalty = getTotalPenalty(familyAssign, verbose)
 
-    totGift = getTotalGift(familyAssign)
+    totGift = getTotalGift(familyAssign, verbose)
 
-    print(totGift, totPenalty)
+    # print(totGift, totPenalty)
     return totPenalty + totGift
 
 def readSampleAssign():
