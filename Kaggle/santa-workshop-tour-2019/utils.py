@@ -42,6 +42,7 @@ def getTotalPenalty(familyAssign): # length 100
             Nd1 = NdList[i]
 
         curPenalty = (Nd-125.)/400. * Nd**(0.5+abs(Nd-Nd1)/50.)
+        # print('exponent:', 0.5+abs(Nd-Nd1)/50.)
         totPenalty += curPenalty
 
     return totPenalty
@@ -83,10 +84,10 @@ def getTotalGift(familyAssign):
         totalGift += curGift
     return totalGift
 
-def getNdList(familyAssign):
+def getNdList(familyAssign): # familyAssigment: from 1 to 100
     NdList = [0] * 100
     familySizes = getFamilySizes()
-    print(familyAssign)
+    # print(familyAssign)
     for i in range(len(familyAssign)):
         NdList[familyAssign[i]-1] += familySizes[i]
     return NdList
@@ -98,6 +99,7 @@ def getTotalScore(familyAssign): # list of assignment
 
     totGift = getTotalGift(familyAssign)
 
+    print(totGift, totPenalty)
     return totPenalty + totGift
 
 def readSampleAssign():
@@ -106,6 +108,6 @@ def readSampleAssign():
 
 if __name__ == '__main__':
     sampleAssign = readSampleAssign()
-    print(getTotalScore(sampleAssign))
+    # print(getTotalScore(sampleAssign))
 
     # print(readDataDf())
