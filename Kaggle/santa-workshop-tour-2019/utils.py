@@ -1,11 +1,13 @@
 
 
 import pandas as pd
-
+import numpy as np
 
 def readDataDf():
-    df = pd.read_csv("data/family_data.csv")
+    df = pd.read_csv("/Users/songxu/PycharmProjects/Data_Science/Kaggle/santa-workshop-tour-2019/data/family_data.csv")
     return df
+
+familyDataNp = readDataDf().values
 
 def getGift(ind, familySize):
     gifts = {
@@ -31,8 +33,10 @@ def getTotalPenalty(familyAssign, verbose=False): # length 100
     :return:
     """
     NdList = getNdList(familyAssign)
-    if verbose:
-        print("NdList[:10] inside getTotalPenalty():", NdList[:10])
+    if False: #verbose:
+        # print("NdList[:10] inside getTotalPenalty():", NdList[:10])
+        print(NdList)
+        # np.savetxt("intermediate/familyAssign.txt", familyAssign)
 
     totPenalty = 0
     for d in range(1,101):
@@ -61,7 +65,7 @@ def getCurGift(assignDay, familyPreferencesList, familySize):
     return getGift(perferInd, familySize)
 
 def getFamilySizes():
-    familyDataNp = readDataDf().values
+
 
     row, col = familyDataNp.shape
     familySizes = []
@@ -89,27 +93,31 @@ def getTotalGift(familyAssign, verbose=False):
 def getNdList(familyAssign): # familyAssigment: from 1 to 100
     NdList = [0] * 100
     familySizes = getFamilySizes()
-    # print(familyAssign)
-    for i in range(len(familyAssign)):
-        NdList[familyAssign[i]-1] += familySizes[i]
+    # print(len(familyAssign))
+    for i in range(len(familyAssign)): # i ranges from 0 to 4999
+        # if (familyAssign[i] != int(round(familyAssign[i]))):
+        #     print("wtf")
+        day = int(round(familyAssign[i]))
+        NdList[day-1] += familySizes[i]
     return NdList
 
 def getTotalScore(familyAssign, verbose=False): # list of assignment
 
 
-    totPenalty = getTotalPenalty(familyAssign, verbose)
+    totClean = getTotalPenalty(familyAssign, verbose)
 
     totGift = getTotalGift(familyAssign, verbose)
 
-    # print(totGift, totPenalty)
-    return totPenalty + totGift
+    if verbose:
+        print("totGift, totClean:", totGift, totClean)
+    return totClean + totGift
 
 def readSampleAssign():
     df = pd.read_csv("data/sample_submission.csv")
     return df["assigned_day"].tolist()
 
 if __name__ == '__main__':
-    sampleAssign = readSampleAssign()
+    # sampleAssign = readSampleAssign()
     # print(getTotalScore(sampleAssign))
-
+    print(getFamilySizes())
     # print(readDataDf())
