@@ -1,4 +1,4 @@
-from flask import Flask, render_template, requests
+from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
 from sklearn.externals import joblib
@@ -14,13 +14,13 @@ def predict():
     if request.method == "POST":
         try:
             NewYork = float(request.form['NewYork'])
-            Califonia = float(request.form['Califonia'])
+            Califonia = float(request.form['California'])
             Florida = float(request.form['Florida'])
-            RnDSpend = float(request.form['RnDSpend'])
-            AdminSpend = float(request.form['AdminSpend'])
-            MarketSpend = float(request.form['MarketSpend'])
+            RnD_Spend = float(request.form['RnD_Spend'])
+            Admin_Spend = float(request.form['Admin_Spend'])
+            Market_Spend = float(request.form['Market_Spend'])
 
-            pred_args = [NewYork, Califonia, Florida, RnDSpend, AdminSpend, MarketSpend]
+            pred_args = [NewYork, Califonia, Florida, RnD_Spend, Admin_Spend, Market_Spend]
             pred_args_arr = np.array(pred_args)
             pred_args_arr = pred_args_arr.reshape(1, -1)
 
@@ -28,7 +28,7 @@ def predict():
             ml_model = joblib.load(mul_reg)
             model_prediction = ml_model.predict(pred_args_arr)
             model_prediction = round(float(model_prediction), 2)
-        except valueError:
+        except ValueError:
             return "Please check if the values are entered correctly"
         return render_template("predict.html", prediction = model_prediction)
 
