@@ -40,9 +40,17 @@ precision and recall, trade-off
 label imbalance, use what metric
 
 classification metric? and why
+- precision, recall (population sensitive?)
+- for imbalanced data
+  - TPR = sensitivity = recall = prob that an actual positive will test positive 
+  - ROC curve: TPR vs FPR (= 1 - specificity)
+  - precision: when I say you are 1 (conditioned on prediction), you are actually 1; this is population-dependent metric, because in different populations, I (a specific classifier) have different predictions
+  - specificity: when you are 0 (conditioned on truth), I actually say 0; population-independent, because truth population are fixed. 
 
 confusion matrix
-AUC explain (the probability of ranking a randomly selected positive sample higher blablabla....)
+
+AUC explain 
+- ()the probability of ranking a randomly selected positive sample higher blablabla....)
 
 true positive rate, false positive rate, ROC
 
@@ -61,183 +69,270 @@ context realted: ranking design use what metric? recommend?
 \sum (y_true - y_pred_prob)^2
 
 Linear Regression最小二乘法和MLE关系
-- same
+- MLE: assume come from a certain distribution; observed data most probab, by optimizing parameters
+- MSE: same when assume normal distribution
 
 什么是relative entropy/crossentropy,  以及K-L divergence 他们intuition
 - kl = relative entropy, 1 distr differs from reference entropy
 - weighted sum of log ratio, across X?
 
-Logistic Regression的loss是什么, 推导
+Logistic Regression's loss is what, derive?
+- cross entropy
+- TODO
 
-SVM的loss是什么
-- todo
+SVM's loss is what
+- hinge loss, max(0, 1-p*y)
+- SVM gives some punishment to both incorrect predictions and those close to decision boundary
 
-Multiclass Logistic Regression然后问了一个为什么用cross entropy做cost function
+Multiclass Logistic Regression, why use cross entropy as cost function
 
-Decision Tree split node的时候优化目标是啥
+Decision Tree split node, what is the optimization goal?
+- gini index is one of impurity: \sum f_i (1-f_i)
 
 2. DL基础概念类
 DNN为什么要有bias term, bias term的intuition是什么
+- to shift position of curve to delay/accelerate activation of node
 
 什么是Back Propagation
+- use diff as feedback to adjust weights layer by layer, backward
 
 梯度消失和梯度爆炸是什么，怎么解决
+- what:
+  - n layers, n derivatives were multiplied together
+  - if derivatives are small (stop)/large (unstable), we have either
+- how TODO:
+  - reduce n of layers
+  - Gradient Clipping for explode
+  - weight initialization, partial solve [article](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79)
 
 神经网络初始化能不能把weights都initialize成0
+- TODO
 
 DNN和Logistic Regression的区别
+- stacked?
 
 你为什么觉得DNN的拟合能力比Logistic Regression强
+- complexity, more parameters/degree of freedom
 
-how to do hyperparameter tuning in DL/ random search, grid search
+how to do hyperparameter tuning in DL/ 
+- random search, grid search
+- more advanced: genetic, bayesian (IDK details)
 
 Deep Learning有哪些预防overfitting的办法
+- dropout, batchnorm (?)
 
 什么是Dropout，why it works，dropout的流程是什么 (训练和测试时的区别)
+- TODO
 
 什么是Batch Norm, why it works, BN的流程是什么 (训练和测试时的区别)
+- TODO
 
 common activation functions （sigmoid, tanh, relu, leaky relu） 是什么以及每个的优缺点
+- TODO
 
 为什么需要non-linear activation functions
+- introduce non-linearity, otherwise just logistic regression
 
 Different optimizers (SGD, RMSprop, Momentum, Adagrad，Adam) 的区别
+- TODO
 
 Batch 和 SGD的优缺点, Batch size的影响
+- SGD is Batch size 1
+- small: more stable, but slow
 
 learning rate过大过小对于模型的影响
+- similar to batch size
 
 Problem of Plateau, saddle point
+- search space, gradient tends to 0 locally
 
 When transfer learning makes sense.
+  - DNN is able to extract different (meaningful or not) levels of representations
+  - Some categories share these more abstract levels (on most fundamental level, lines, edges, angles)
 
 
 3. ML模型类
 3.1 Regression:
 Linear Regression的基础假设是什么
+- noise normal distributed?
 
 what will happen when we have correlated variables, how to solve
+- coefficient doesn't make sense
+- what to do?
 
 explain regression coefficient
+- weight
 
 what is the relationship between minimizing squared error  and maximizing the likelihood
+- for normal distribution , the same
 
 How could you minimize the inter-correlation between variables with Linear Regression?
+- PCA?
 
 if the relationship between y and x is no linear, can linear regression solve that
+- only locally
 
 why use interaction variables
+- ...
 
 3.2 Clustering and EM:
 K-means clustering (explain the algorithm in detail; whether it will converge, 收敛到global or local optimums;  how to stop)
+- TODO: local or global?
 
 EM算法是什么
+- TODO
 
 GMM是什么，和Kmeans的关系
+- TODO
 
 3.3 Decision Tree
 How regression/classification DT split nodes?
+- minimize gini impurity
 
 How to prevent overfitting in DT?
+- depth
 
 How to do regularization in DT?
+- regularization term?
 
 3.4 Ensemble Learning
 difference between bagging and boosting
+- ...
 
 gbdt和random forest 区别，pros and cons
+- gbdt: more likely to overfit, but faster
 
 explain gbdt/random forest
 
 will random forest help reduce bias or variance/why random forest can help reduce variance
+- independent
 
 3.5 Generative Model
 和Discrimitive模型比起来，Generative 更容易overfitting还是underfitting
+- TODO
 
 Naïve Bayes的原理，基础假设是什么
+- independent
 
 LDA/QDA是什么，假设是什么
+- TODO
 
 3.6 Logistic Regression
-logistic regression和svm的差别 （我想这个主要是想问两者的loss的不同以及输出的不同，一个是概率输出一个是score）
-
-LR大部分面经集中在logloss和regularization，相关的问题在上个帖子有了这里就不重复了。
+logistic regression和svm的差别 （
+- 我想这个主要是想问两者的loss的不同以及输出的不同，一个是概率输出一个是score）
+- LR大部分面经集中在logloss和regularization，相关的问题在上个帖子有了这里就不重复了。
 
 3.7 其他模型
 Explain SVM, 如何引入非线性
+- hinge loss, non-boundary pts don't contribute
 
 Explain PCA
+- TODO
 
 Explain kernel methods, why to use
+- essentially, different weights in locals
 
 what kernels do you know
+- Gauss, TODO?
 
 怎么把SVM的output按照概率输出
+- TODO
 
 Explain KNN
+- ...
 
 !所有模型的pros and cons （最高频的一个问题）
+- TODO
 
 4. 数据处理类
 怎么处理imbalanced data
+- under/over sampling; TODO: other new methods SMOKE
 
 high-dim classification有什么问题，以及如何处理
+- ?
 
 missing data如何处理
+- depend on if it is missing at random
 
 how to do feature selection
+- I tried recursive selection; could also do L1
 
 how to capture feature interaction
+- tree
 
 5. implementation 、推导类
 写代码实现两层fully connected网络
+- TODO
 
 手写CNN
+- TODO
 
 手写KNN
+- TODO
 
 手写K-means
+- TODO
 
 手写softmax的backpropagation
+- TODO
 
 给一个LSTM network的结构要你计算how many parameters
+- TODO
 
 convolution layer的output size怎么算? 写出公式
-       
+- TODO
+  
 6.项目经验类
 训练好的模型在现实中不work,问你可能的原因
+- data distribution; online offline FE different/missing
 
 Loss趋于Inf或者NaN的可能的原因
+- exploding
 
 生产和开发时候data发生了一些shift应该如何detect和补救
+- retrain
 
 annotation有限的情況下你要怎麼Train model
+- semi-supervised? TODO
 
 假设有个model要放production了但是发现online one important feature missing不能重新train model 你怎么办
+- ??? calibration??
+- use other features to interpolate the feature?
 
 7. NLP/RNN相关
 LSTM的公式是什么
+- TODO
 
 why use RNN/LSTM
+- TODO
 
 LSTM比RNN好在哪
+- TODO
 
 limitation of RNN
+- TODO
 
 How to solve gradient vanishing in RNN
+- TODO
 
 What is attention, why attention
+- TODO
 
 Language Model的原理，N-Gram Model
+- TODO
 
 What’s CBOW and skip-gram?
+- TODO
 
 什么是Word2Vec， loss function是什么， negative sampling是什么
+- TODO
 
 8. CNN/CV相关
 maxpooling， conv layer是什么, 为什么做pooling，为什么用conv lay，什么是equivariant to-translationa, invariant to translation
+- TODO
 
 1x1 filter
+- TODO
 
 什么是skip connection
 （楼主没有面任何CV的岗位之前所以基本没收集到什么CV相关的问题）
