@@ -273,8 +273,35 @@ how to capture feature interaction
 手写K-means
 - TODO
 
-手写softmax的backpropagation
-- TODO
+手写softmax的back propagation
+1. error func:
+  - cross entropy: E(t,p) = -\sum_j t_j log p_j (t as y_true, p as y_pred here)
+2. softmax: 
+  - for a total of J classes, it outputs as softmax probability p_j = e^{z_j} / \sum_j e^{z_j}
+  - here z_j = \sum_i w_{ij} p_i + b, p_i are all outputs from prev layer
+  - ... -> ... -> p_i -> p_j
+3. goal: calc how to update w_{ij} in the prev layer
+  - chain rule: dE / dw_{ij} = (dE / p_j) (d p_j / d z_j) (d z_j / d w_{ij}) 
+
+    a. (dE / d p_j) = -t_j / p_j
+
+    b. (d p_j / d z_j) = (e^{z_j}*\sum_j e^{z_j} - e^{2z_j})/ [\sum_j e^{z_j}]^2 = p_j - p_j^2    
+    
+    c. (d z_j / d w_{ij}) = p_i
+  - together, we have dE / dw_{ij} = -t_j (1-p_j) p_i
+  - [WRONG](https://stats.stackexchange.com/questions/235528/backpropagation-with-softmax-cross-entropy)! when t_j=0, this weight will never update?!
+  - [WRONG](https://stats.stackexchange.com/questions/235528/backpropagation-with-softmax-cross-entropy)!! cannot assume  
+  - Reason: Notice p_k all has z_J. So dE / dz_j needs full expansion!!
+    - Lesson: Chain rule needs to be step by step. Don't skip!
+  - Correct: 
+    (dE / dz_j other terms) = sum_{k!=j} (dE / dp_k) (dp_k / dz_j)
+    
+    a'. dE / dp_k = -t_k / p_k
+    
+    b'. dp_k / dz_j = (0-e^{z_j+z_k})/(\sum_j e^{z_j})^2 = - p_k p_j
+    
+    (a+b)'.  -t_j(1-p_j) + \sum_{k!=j} t_k * p_j = -t_j + \sum_{k} t_k * p_j = -t_j + p_j
+  - together', we have dE / dw_{ij} = p_i (p_j - t_j)
 
 给一个LSTM network的结构要你计算how many parameters
 - TODO

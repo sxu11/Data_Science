@@ -14,6 +14,33 @@ Logistic Regression:
     - BTW, z = w^T x + b
 
     ![plot](gradientDescientLogistic.png)
+    
+  - TODO: when there is regularization?
 
   - Newton's Method optimizer:
-    - https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-ii-d20a239cde11
+    - not update at w, but at an updated w TODO
+        - essentially, root-finding, given x0
+        - x_{n+1} = x_n - J'(x_n)/J''(x_n)
+    - auto-varying alpha, but equals to 1/J'' TODO?? Converges faster [article](https://towardsdatascience.com/optimization-loss-function-under-the-hood-part-ii-d20a239cde11)
+        
+        
+Activation function:
+- sigmoid(z) = 1/(1+e^-z): between (0,1), only useful for output
+- tanh(z) = (e^z-e^-z)/(e^z+e^-z): shifted sigmoid, always better than sigmoid for internal, because distribute around 0
+- ReLU(z) = max(0,z): good because gradient is 1 for large z
+- leaky ReLU(z) = max(0.01z, z): small negative when z < 0, to make gradient non-zero (practically not necessary)  
+
+Propagation (TODO: how): 
+- Forward: 
+  z[1] = w[1]X + b[1], 
+  A[1] = g[1] (z[1]), 
+  z[2] = w[2]A + b[2],
+  A[2] = g[2] (z[2]) = sigma(z[2])
+- Backward:
+  dz[2] = A[2] - Y,
+  dw[2] = 1/m dz[2] A^T[1]
+  db[2] = 1/m np.sum(dz[2], axis=1, keepdims=True)
+  dz[1] = w^T[2] dz[2] g'[1] (Z[1]) (n[1],m)
+  dw[1] = 1/m dz[1] X^T
+  db[1] = 1/m np.sum(dz[1], axis=1, keepdims=True)
+  
