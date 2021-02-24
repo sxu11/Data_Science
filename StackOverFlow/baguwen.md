@@ -183,7 +183,9 @@ EM算法是什么
 - TODO
 
 GMM是什么，和Kmeans的关系
-- TODO
+- Kmeans only considers mean, while Gaussian mixture model considers both mean/variance
+- TODO: [read](https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/) that includes EM
+
 
 3.3 Decision Tree
 How regression/classification DT split nodes?
@@ -209,7 +211,7 @@ will random forest help reduce bias or variance/why random forest can help reduc
 
 3.5 Generative Model
 和Discrimitive模型比起来，Generative 更容易overfitting还是underfitting
-- TODO
+- TODO [andrew paper](http://ai.stanford.edu/~ang/papers/nips01-discriminativegenerative.pdf)
 
 Naïve Bayes的原理，基础假设是什么
 - independent
@@ -227,16 +229,16 @@ Explain SVM, 如何引入非线性
 - hinge loss, non-boundary pts don't contribute
 
 Explain PCA
-- TODO
+- TODO: [andrew explain](https://www.youtube.com/watch?v=rng04VJxUt4)
 
 Explain kernel methods, why to use
 - essentially, different weights in locals
 
 what kernels do you know
-- Gauss, TODO?
+- Gauss, TODO? [andrew](https://www.youtube.com/watch?v=mTyT-oHoivA)
 
 怎么把SVM的output按照概率输出
-- TODO
+- TODO [andrew](https://www.youtube.com/watch?v=hCOIMkcsm_g)
 
 Explain KNN
 - ...
