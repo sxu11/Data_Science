@@ -41,9 +41,25 @@ Why L1 is more sparse than L2?
 
 Why regularization works
 - easy to overfit 
+- In andrew's DL course e.g.:
+  - big lambda term suppresses w, which makes less neuron
+  - in case of tanh activation function, when w is small, activation near linear, overall closer to Logistic regression
+- Other ways:
+  - Dropouts (randomly remove all links of certain nodes)
+    - Intuition: cannot rely on any 1 feature, need to spreat out weights
+  - Data augmentation
+  - Early stopping: 
+    - How: 
+      - Plot BOTH Training and Validation errors
+      - stop at latter's valley pt
+    - 1 downside: 
+      - ML usually has 2 orthogonal tasks: do Optimize vs don't Overfit
+      - Early stopping tries to do both at same time
 
 Why regularization uses L1 L2, not L3, L4..  
 - l3 l4 no foundamental diff w/ l2
+- L2 term: lambda / 2m  ||w||_2^2, mostly used
+- L1 term: lambda / 2m  ||w||_1, said to bring in sparsity, less used in practice
 
 1.2 Metric:
 precision and recall, trade-off
@@ -104,6 +120,21 @@ Decision Tree split node, what is the optimization goal?
 DNN为什么要有bias term, bias term的intuition是什么
 - to shift position of curve to delay/accelerate activation of node
 
+Andrew DL tricks to set up Optimization:
+- Normalize training and test (same mean and variance) sets
+  - why: Otherwise cost func will be dominated by 1 dim; have to use much smaller learning rate to approach the smaller-scale dim
+- Vanishing/exploding gradients
+  - partial solu: careful random initialization, set var(w[l])=1/n[l-1] (for tanh; but when use ReLU, set to be 2/n[l-1]) 
+    - so \sum w_i*x_i add up to a not super large z
+- Gradient checking
+  - Take w[1], b[1], w[2], b[2], ..., w[l], b[l] into a big vector \theta, we have loss J(\theta)
+  - Take dw[1], db[1], dw[2], db[2], ..., dw[l], db[l] into a big vector d\theta
+  - Question: Is d\theta the gradient of J(\theta)?
+    - d_{numeric}\theta[i] = [J(\theta_1,\theta_2,...\theta_i+\epsilon,...)-J(\theta_1,\theta_2,...\theta_i-\epsilon,...)] / 2\epsilon
+    - d\theta[i] = dJ / d\theta_i
+    - ||d_{numeric}-d||_2 / (||d_{numeric}||_2+||d||_2) ~ 10**-7 ??
+    - 10**-5 needs to check, 10**-3 worry! 
+
 什么是Back Propagation
 - use diff as feedback to adjust weights layer by layer, backward
 
@@ -112,7 +143,7 @@ DNN为什么要有bias term, bias term的intuition是什么
   - n layers, n derivatives were multiplied together
   - if derivatives are small (stop)/large (unstable), we have either
 - how TODO:
-  - reduce n of layers
+  - reduce num of layers
   - Gradient Clipping for explode
   - weight initialization, partial solve [article](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79)
 
