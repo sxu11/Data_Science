@@ -30,7 +30,7 @@ Activation function:
 - ReLU(z) = max(0,z): good because gradient is 1 for large z
 - leaky ReLU(z) = max(0.01z, z): small negative when z < 0, to make gradient non-zero (practically not necessary)  
 
-Propagation (TODO: how): 
+Propagation (how): 
 - Forward: 
   z[1] = w[1]X + b[1], 
   A[1] = g[1] (z[1]), 
@@ -44,3 +44,11 @@ Propagation (TODO: how):
   dw[1] = 1/m dz[1] X^T
   db[1] = 1/m np.sum(dz[1], axis=1, keepdims=True)
   
+Random Initialization
+- If set all 0, all weights will be symmetric (always same)
+  
+Get dimensions right
+- Input X.shape (2,1), 1st layer 3 neurons: z[1].shape=(3,1), 
+  - Since z[1] = w[1]X+b[1], we have w[1].shape=(3,2), b[1].shape=(3,1)
+- 2nd layer 5 neurons: z[2].shape=(5,1)
+  - ...

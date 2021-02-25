@@ -6,11 +6,22 @@ https://yanjin.space/blog/2020/2020305.html
   - Underfiting is no fitting signal enough, usually by imposing too simplistic
   
 What are bias/variance trade off? 
-  - bias is deviation from signal
-  - variance is 
+  - bias is deviation from signal, variance is ... 
+  - From Andrew's DL cs 2 wk1 (basic recipe): 
+    - Traditional ML: tradeoff
+      - High bias? Need to improve training data performance 
+        - Bigger network
+        - Train longer
+      - High variance? Need to improve validation data performance
+        - More data
+        - Regularization
+    - Deep Learning: often not talk about tradeoff much by NN architecture search
+      - With more data and more layers today, DL can achieve both (or least doesn't hurt the other) at same time
+      - Just need to add more training time or computational power
 
 How to avoid overfitting?
   - Regularization (L1, L2, TODO: others?)
+  
   
 Diff of Generative & Discrimitive?
   - k
