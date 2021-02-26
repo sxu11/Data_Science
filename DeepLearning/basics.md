@@ -99,3 +99,14 @@ Optimization process:
 - Local optima
   - For high-D, not likely to stuck in local optima, but most 0-gradient pts are actually saddles 
   - Plateaus is the real problem for slow learning
+  
+- Tuning:
+  - random grid
+  - proper scale
+  
+- Batch Norm
+  - Normalize at each layer, each mini-batch
+  - Why work?
+    - More robust to data distribution change
+    - Small regularization effect, as introduced some noise
+  - At test: use stored exponential weighted avg mu,sigma at training time
