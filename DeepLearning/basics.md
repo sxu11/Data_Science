@@ -110,3 +110,20 @@ Optimization process:
     - More robust to data distribution change
     - Small regularization effect, as introduced some noise
   - At test: use stored exponential weighted avg mu,sigma at training time
+
+Structure ML project
+
+- Set up goal
+  - Single eval metric
+  - Satisfying metric
+  - Train/dev/test set distribution
+    - mix different categories and shuffle, so have same distribution (at least dev/test)
+    - For big data, it's ok to do 98%/1%/1% distribution
+
+- Error Analysis
+  - Manully pick 100 wrong decisions, what are distribution of labels?
+  - Clean up incorrectly labeled data (training set ok)
+  - May create a train-dev set besides train and dev sets (when mismatched distribution)
+  ![plot](errorAnalysis.png)
+  - Build 1st system quickly (BC there are too many ways to improve) and then iterate
+  - Address mismatch: synthesis (but careful of overfitting)
