@@ -127,3 +127,15 @@ Structure ML project
   ![plot](errorAnalysis.png)
   - Build 1st system quickly (BC there are too many ways to improve) and then iterate
   - Address mismatch: synthesis (but careful of overfitting)
+
+- Transfer Learning:
+  - More data in tasks transferred from, less data in transferred to 
+  - Multi-task (-label) learning (less used than transfer learning): 
+    - lower-level layers can be shared between tasks e.g.
+        - has pedestrain? y1
+        - has car? y2
+        - has stop sign? y3
+        - has traffic light? y4
+    - loss = L(y1_true,y1_pred) + L(y2_true,y2_pred) + L(y3_true,y3_pred) + L(y4_true,y4_pred)
+    - different from softmax (multi-class)
+    - amt of data for each task is similar
