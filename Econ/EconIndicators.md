@@ -157,3 +157,20 @@ Worries:
               - velocity (turns over) of money will continue to fall
                 - Reason that QE after 08-09 meltdown never ignited inflation (even though Money went up): 
                   - turn over rate per year (velocity) slowed down as people risk-averse 
+                  
+Liquidity in ETF space broadly
+- We manage assets in many different wrappers
+- misunderstanding of liquidity in ETF: 
+  - going back to 08/09, many active bond strategies in ETF wrappers
+  - investors fear, wanted to get their money out of bond funds
+  - only liquidity provide then (in ETF space): 
+    - market makers
+    - authorized participants
+  - the underlying bonds were not trading! 
+    - market not working
+    - ETFs were out there & provided a market 
+      - did they take a discount? yes (and should have), the price of liquidity at that time
+  - even though equity market volatile/volume exploded, the ETF industry handled it beautifully!
+  - as a portfolio manager, I know the diff between:
+    - ETF wrapper (no worry of flows); just making investment decisions
+    - mutual fund wrapper (need worry, if market shut down)
