@@ -1,4 +1,11 @@
-https://www.linkedin.com/learning/economic-indicators/what-is-fiscal-policy?u=3322
+[LinkedIn Learning](https://www.linkedin.com/learning/economic-indicators/what-is-fiscal-policy?u=3322)
+
+[seekingalpha on fair value of S&P500](https://seekingalpha.com/article/4395421-modeling-fair-value-of-s-and-p-500)
+sp500 = F(gdp, m1, bba_10y, cpi)
+- gdp: +++ corr
+- m1: ++ corr
+- bba_10y: - corr
+- cpi: -- corr
 
 Prediction for 03/22/2021
 - 02/22, S&P 500/TSLA/Bitcoin/MSFT/AMZN avg +7% (just feeling)
