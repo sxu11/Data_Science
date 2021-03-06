@@ -149,19 +149,19 @@ Deep Learning有哪些预防overfitting的办法
 - dropout, batchnorm (?)
 
 什么是Dropout，why it works，dropout的流程是什么 (训练和测试时的区别)
-- TODO
+- See DL
 
 什么是Batch Norm, why it works, BN的流程是什么 (训练和测试时的区别)
-- TODO
+- See DL
 
 common activation functions （sigmoid, tanh, relu, leaky relu） 是什么以及每个的优缺点
-- TODO
+- See DL
 
 为什么需要non-linear activation functions
 - introduce non-linearity, otherwise just logistic regression
 
 Different optimizers (SGD, RMSprop, Momentum, Adagrad，Adam) 的区别
-- TODO
+- See DL
 
 Batch 和 SGD的优缺点, Batch size的影响
 - SGD is Batch size 1
@@ -206,8 +206,25 @@ why use interaction variables
 K-means clustering (explain the algorithm in detail; whether it will converge, 收敛到global or local optimums;  how to stop)
 - TODO: local or global?
 
-EM算法是什么
-- TODO
+EM算法是什么 [sth](https://stats.stackexchange.com/questions/97324/em-algorithm-practice-problem) interesting:  
+  0. Setups
+    - X[1],...,X[n] are independent exponential RVs w/ rate T. 
+      - P(X) = theta e^(-T X)
+    - Not directly observable. Only observe if they fall in intervals: 
+      - G1[j] = \1{X[j]<1}, G2[j] = \1{1<X[j]<2}, G3[j] = \1{X[j]>2}
+  1. Observed data likelihood?
+    - L(T|G) = \prod Pr{X[j]<1}^G1[j] * Pr{1<X[j]<2}^G2[j] * Pr{X[j]>2}^G3[j]
+                 = \prod [1-e^(-T)]^G1[j] * [e^(-T)-e^(-2T)]^G2[j] * [e^(-2T)]^G3[j]
+  2. Complete data likelihood? 
+    - L(T|X,G) = \prod T e^(-T X[j]) 
+  
+  3. Predictive density of the latent variable?
+    - f(X[J]|G,T) = f_{X,G}(X[j],g) / f_{G}(g), where 
+      - nominator = T e^(-T X[j]) 
+      - denominator = [1-e^(-T)]^g1[j] [e^(-T)-e^(-2T)]^g2[j] [e^(-2T)]^g3[j]
+  
+  4. E-step
+  - 
 
 GMM是什么，和Kmeans的关系
 - Kmeans only considers mean, while Gaussian mixture model considers both mean/variance
