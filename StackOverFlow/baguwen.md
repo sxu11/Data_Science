@@ -206,25 +206,69 @@ why use interaction variables
 K-means clustering (explain the algorithm in detail; whether it will converge, 收敛到global or local optimums;  how to stop)
 - TODO: local or global?
 
-EM算法是什么 [sth](https://stats.stackexchange.com/questions/97324/em-algorithm-practice-problem) interesting:  
+EM算法是什么
+[sth](https://www.youtube.com/watch?v=REypj2sy_5U) 
+- Mixture (Gaussian/Multinomial, soft clustering) model里面用
+  - 相比于k-means (hard clustering)
+  - 但mean/variance不知道
+    - EM: automatically discover all params for the K "sources"
+  - chicken & egg problem
+  - Steps (1d e.g.):
+    - start w/ mu[0],sigma[0] and mu[1],sigma[1]
+    - for each pt: P(0|X[i]) does it look like from 0 or 1?
+      - like coloring each pt w/ the 0 and 1 colors
+      - Pr(X[i]|0) = 1/sqrt(2pi sigma[0]^2) e^(-(x-mu[0])/2sigma[0]^2)
+      - zero[i] = Pr(0|X[i]) = Pr(X[i]|0) Pr(0)/(Pr(X[i]|0) Pr(0) + Pr(X[i]|1) Pr(1))
+      - one[i] = 1 - zero[i]
+      - 新的mu[0] = \sum zero[i] X[i] / \sum zero[i]
+      - 新的sigma[0] = \sum zero[i] (X[i]-mu[0])^2 / \sum zero[i] 
+    - Could also estimate the priors: 
+      - P(0) = \sum zeros[i] / n
+      - P(1) = 1 - P(0)
+    - adjust mu[0],sigma[0] and mu[1],sigma[1] to fit pts assigned to them
+    - iterate until converge
+    
+    
+[sth](https://stats.stackexchange.com/questions/97324/em-algorithm-practice-problem) interesting:  
   0. Setups
     - X[1],...,X[n] are independent exponential RVs w/ rate T. 
       - P(X) = theta e^(-T X)
     - Not directly observable. Only observe if they fall in intervals: 
       - G1[j] = \1{X[j]<1}, G2[j] = \1{1<X[j]<2}, G3[j] = \1{X[j]>2}
-  1. Observed data likelihood?
+  1. Observed data likelihood? 
     - L(T|G) = \prod Pr{X[j]<1}^G1[j] * Pr{1<X[j]<2}^G2[j] * Pr{X[j]>2}^G3[j]
                  = \prod [1-e^(-T)]^G1[j] * [e^(-T)-e^(-2T)]^G2[j] * [e^(-2T)]^G3[j]
+    - 其实这个算的就是 Pr(G|T); 根据贝叶斯二者是\propto的关系，且likelihood本来就是相对值，无所谓scale
+  
   2. Complete data likelihood? 
     - L(T|X,G) = \prod T e^(-T X[j]) 
+    - 这个是 Pr(X,G|T)
   
   3. Predictive density of the latent variable?
     - f(X[J]|G,T) = f_{X,G}(X[j],g) / f_{G}(g), where 
       - nominator = T e^(-T X[j]) 
       - denominator = [1-e^(-T)]^g1[j] [e^(-T)-e^(-2T)]^g2[j] [e^(-2T)]^g3[j]
+    - 这个关键，是第j个data pt的 Pr(X[j]|G,T)的density, 假设其G[j]
+      - 分子是 Pr(X[j],G[j] | T)=L(T|X,G), 分母是 Pr(G[j] | T) = L(T|G)
+    - 这个其实就是T的 likelihood func?!
   
-  4. E-step
-  - 
+  4. E-step, give:
+    - Q(T, T[i]) = nlogT - T \sum E[X[j]|G,T[i]] = nlogT minus 3 terms: 
+      - T(\sum g1[j]/(1-e^(-T[i]))) * (1/T[i] - e^(-T[i])(1+1/T[i]))
+      - T(\sum g2[j]/e^(-T[i])(1-e^(-T[i]))) * (e^(-T[i])(1+1/T[i]) - e^(-2T[i])(2+1/T[i]))
+      - T(\sum g3[j]/e^(-2T[i])) * e^(-2T[i])(2+1/T[i])
+    - which together = nlogT - TN[1]A - TN[2]B - TN[3]C, where
+      - N[1] = \sum g1[j]
+    - Q(T|T[i])定义为expected val of log likelihood func of T, given ...
+    
+  5. Let dQ / dT = 0, get:
+    - T[i+1] = n / (N[1]A + N[2]B + N[3]C)
+
+probability vs likelihood:
+- probability: attaches to possible results
+  - Possible results are mutually exclusive and exhaustive.
+- likelihood: attaches to hypotheses
+  - Hypotheses, unlike results, are neither mutually exclusive nor exhaustive.
 
 GMM是什么，和Kmeans的关系
 - Kmeans only considers mean, while Gaussian mixture model considers both mean/variance
@@ -427,3 +471,73 @@ maxpooling， conv layer是什么, 为什么做pooling，为什么用conv lay，
 
 你应该不一定需要知道最SOTA的模型，但是知道那些最广为运用的模型或许可能是必要的。这是我的想法，不一定正确。
 
+
+ML design模版 [post1](https://www.1point3acres.com/bbs/thread-573328-1-1.html)
+[post2](https://www.1point3acres.com/bbs/interview/google-machine-learning-585908.html)
+- 顺序：
+  - 什么问题？
+    - classification
+    - regression
+    - relevance/matching/ranking
+  - diagram
+    - training/testing data, 
+    - input representation
+    - model (先)
+    - output, 
+    - evaluation, 
+    - optimization (parameter estimation)
+  - model先
+      - 2-3个常用的，比较优劣势
+            - 不要pick太弱智的！
+            - 可以画出model的萌图。。
+            - 写一下技术要点，比如：
+              - DNN的SGD/ADAM
+              - LR的log likelihood
+              - regularization: L1 L2
+  - Input features: 
+    - DNN: one-hot -> embedding
+  - (老手1) Data:
+    - 根据具体的问题，data的solution可以非常creative。甚至Training data和testing有时候不一致
+      - e.g. language model方面的问题：decide一个twitter post是什么语言？
+      training 可能就用wikipedia，testing则可以收集user data或者platform-specific的data，
+      这时候也需要指明testing如何get ground truth(testing label).
+    - training + label,  
+      - propose可用的data 来源+data format
+      - how to preprocess data -> make training data
+      - how to build/create label
+    - testing + ground truth
+  - (老手2) Eval: 重点在metrics
+      - 一个是ROC/AUC curve
+      - 第二个是domain specific metrics，比如广告就有CTR
+      - 第三个是confusion matrix (重点是从它延申出来precision/recall/accuracy等等对你的solution重要的metrics)
+      
+
+- 大局：
+  - 结构化表达。超过三点，听的人容易lost。
+    - 第一句话先说：这个问题可以从2方面来考虑：用户和系统。系统这方面有3(数字)个solution
+    - I’m going to talk about a few components..
+  - Stress test:
+    - 坚持the principle of problem solving: Break down problem to solvable subtasks
+      - e.g. "你deliver了一个ML的产品/系统，用户使用以后，汇报系统的accuracy 远低于你自己test 的accuracy，哪些方面可能出问题了？要求不能看log。"
+        - 整个系统有两个element：你的ML系统，用户的application。
+        - 把大问题break down成两个element自己的问题+element之间衔接的问题.
+          - 产品的问题(overfitting，training data coverage，etc)
+          - 用户的application的问题(使用产品的domain和develop 产品的domain不一致， 使用方数据的distribution和training data不一致，etc)
+          - 用户的问题(没有按照设计的方式来使用系统，measure的方法不对，使用了和开发方不一样的metrics，etc)
+  - 每一步都尽快和面试官确认，move on，不耽误时间
+
+- 细节：
+  - 会沟通：rephrase问题 + make concrete example
+  - 会接话：听出弦外之音的问题，听出面试官的concern
+  - 熟练的讲解参数估计，能显示solid的数学背景。讲估计参数可以用哪些optimization的方法(MSE, loglikelihood+GD, SGD-training data太大量, ADAM-sparse input)，比较优劣.
+  
+  
+- 自己的项目
+  - 一是和对方相关，
+  - 二是技术越新越厉害，越好；但NDA, 又不能说的太细
+    - 怎么解决呢？在报告的结尾，给一个rethink，讲两部分
+      - 第一，反思如果现在做同样的问题，哪些地方可以提高
+      - 第二，概述一下，你在目前的职位做过的工作，使用了哪些最新的技术，这样显得你的skillset在与时俱进
+  - 三是显得你水平高的内容（平时收集）
+    
+  
