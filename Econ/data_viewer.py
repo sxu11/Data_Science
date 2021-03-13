@@ -1,6 +1,9 @@
 
 import matplotlib.pyplot as plt
 import pandas as pd
+import os
+import numpy as np
+
 
 sp_data = pd.read_csv("manual_data/SP500.csv")
 """2011-03-14 to 2021-03-12"""
@@ -20,8 +23,11 @@ print(gdp_data.head(3))
 
 idx = pd.date_range("2016-03-14", "2021-01-01")
 
-for df in [sp_data, cpi_data, m1_data, baa_data, gdp_data]:
+filenames = ["SP500","CPALTT01USM657N", "WM1NS", "BAA10Y", "GDP"]
+
+for i,df in enumerate([sp_data, cpi_data, m1_data, baa_data, gdp_data]):
     df["DATE"] = pd.to_datetime(df["DATE"], format='%Y-%m-%d')
+    df[filenames[i]] = df[filenames[i]].apply(lambda x: np.NaN if x == "." else float(x))
 
 firstVals = []
 """
@@ -75,4 +81,10 @@ print(gdp_series.head(5))
 # plt.plot(sp_data["0"])
 # plt.ylim([0,3500])
 # plt.show()
+
+
+
+intermediate_folder = "intermediate_data"
+for i, ds in enumerate([sp_series, cpi_series, m1_series, baa_series, gdp_series]):
+    ds.to_csv(os.path.join(intermediate_folder, filenames[i]+".csv"), index=False)
 
