@@ -13,41 +13,20 @@ import pandas as pd
 from fredapi import Fred
 fred = Fred(api_key="39046de0f8665857c262677588e22e46")
 
-observation_start='1960-01-01'
-observation_end='2021-01-01'
+observation_start='2020-12-14'
+observation_end='2021-03-14'
+datestr = observation_start + "__" + observation_end
 
 """
 daily
 """
-s = fred.get_series('SP500', observation_start=observation_start, observation_end=observation_end)
-print(s.tail())
-s.to_csv("data/sp500_19600101_2021_0101.csv", index=False)
+filenames = ["SP500","CPALTT01USM657N", "WM1NS", "BAA10Y", "GDP"]
+for index in filenames:
+    s = fred.get_series(index, observation_start=observation_start, observation_end=observation_end)
+    print(index)
+    print(s.tail())
+    print()
+    s.to_csv("data/%s_%s.csv" % (index, datestr), index=False)
 
+quit()
 
-"""
-3-month
-"""
-g = fred.get_series('GDP', observation_start=observation_start, observation_end=observation_end)
-print(g.tail())
-g.to_csv("data/gdp_19600101_2021_0101.csv", index=False)
-
-"""
-weekly
-"""
-g = fred.get_series('M1', observation_start=observation_start, observation_end=observation_end)
-print(g.tail())
-g.to_csv("data/m1_19600101_2021_0101.csv", index=False)
-
-"""
-daily
-"""
-g = fred.get_series('BAA10Y', observation_start=observation_start, observation_end=observation_end)
-print(g.tail())
-g.to_csv("data/baa10y_19600101_2021_0101.csv", index=False)
-
-"""
-monthly
-"""
-g = fred.get_series('CPALTT01USM657N', observation_start=observation_start, observation_end=observation_end)
-print(g.tail())
-g.to_csv("data/cpi_19600101_2021_0101.csv", index=False)
