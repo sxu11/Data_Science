@@ -9,8 +9,8 @@
     - docker run -p 5000:5000 sp500predictoronazure:latest
     - 在这里看：http://0.0.0.0:5000/
 - push: 
-    - docker tag sp500predictoronazure sxu11/sp500:1.0 (放到https://hub.docker.com/)
-    - docker push sxu11/sp500:1.0 (先要login in)
+    - docker tag sp500predictoronazure sxu11/dockerazure:1.0 (放到https://hub.docker.com/)
+    - docker push sxu11/dockerazure:1.0 (先要login in)
 
 my website: https://mloncloud.azurewebsites.net/
 
@@ -18,7 +18,7 @@ Azure:
 - management: portal.azure.com
     - App Services
     - Create (Web App)
-    - Image and tag: sxu11/sp500:1.0
+    - Image and tag: sxu11/dockerazure:1.0
     - After complete: go to resource, 
         - page: https://sp500predictor.azurewebsites.net/
         - (Application) setting: add name=PORT, value=5000
