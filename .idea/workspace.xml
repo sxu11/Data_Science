@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f98790e5-7e52-4707-bae9-b7833cf778d9" name="Default Changelist" comment="init DecisionTree">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Machine_Learning.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Coinbase_intervial/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Embedding/cluster_signal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HS_Datathon/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ranker/trans_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ranker/wgetdata.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redis/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redis/Pipfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redis/notebooks/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Redis/notebooks/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Optimization/Population_Diffusion/Qiu/test.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-23215691">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="45" />
+          <entry key="project.open.time.0" value="22" />
+          <entry key="project.open.time.1" value="6" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.32" value="1" />
+          <entry key="project.open.time.4" value="6" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="53" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="Dockerfile" value="16" />
+          <entry key="MD" value="1" />
+          <entry key="Pipefile" value="1" />
+          <entry key="cfg" value="2" />
+          <entry key="commands" value="1" />
+          <entry key="csv" value="43" />
+          <entry key="data" value="1" />
+          <entry key="env" value="1" />
+          <entry key="gitignore" value="1" />
+          <entry key="html" value="13" />
+          <entry key="ipynb" value="1" />
+          <entry key="json" value="1" />
+          <entry key="lock" value="1" />
+          <entry key="md" value="56" />
+          <entry key="png" value="3" />
+          <entry key="py" value="74" />
+          <entry key="sh" value="2" />
+          <entry key="tab" value="1" />
+          <entry key="txt" value="6" />
+          <entry key="yml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="13" />
+          <entry key="IPNB" value="1" />
+          <entry key="Image" value="3" />
+          <entry key="JSON" value="1" />
+          <entry key="Markdown" value="57" />
+          <entry key="PLAIN_TEXT" value="76" />
+          <entry key="Python" value="74" />
+          <entry key="YAML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Dockerfile" value="4" />
+          <entry key="cfg" value="2" />
+          <entry key="csv" value="1" />
+          <entry key="data" value="99" />
+          <entry key="gitignore" value="17" />
+          <entry key="html" value="1111" />
+          <entry key="md" value="53573" />
+          <entry key="py" value="31730" />
+          <entry key="sh" value="230" />
+          <entry key="txt" value="1711" />
+          <entry key="yml" value="552" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="1111" />
+          <entry key="Markdown" value="53573" />
+          <entry key="PLAIN_TEXT" value="2064" />
+          <entry key="Python" value="31730" />
+          <entry key="YAML" value="552" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Embedding/cluster_signal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+              <folding>
+                <element signature="e#388#407#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Coinbase_intervial/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="75" selection-start-line="75" selection-end-line="75" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ranker/wgetdata.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ranker/trans_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>anova</find>
+      <find>plt.show</find>
+      <find>b/b</find>
+      <find>gpu</find>
+      <find>print</find>
+      <find>webight_deriv_all</find>
+      <find>mala</find>
+      <find>train_data</find>
+      <find>array</find>
+      <find>FloatProgress</find>
+      <find>logP_cdopt</find>
+      <find>norm_imputed2</find>
+      <find>run_grad_theano</find>
+      <find>plot_flow_pot</find>
+      <find>potenti</find>
+      <find>plot</find>
+      <find>relu_pack</find>
+      <find>potin</find>
+      <find>theano.</find>
+      <find>grad</find>
+      <find>logp</find>
+      <find>T_relu</find>
+      <find>Tpot_relu</find>
+      <find>gradient</find>
+      <find>relu</find>
+      <find>back</find>
+      <find>softmax</find>
+      <find>dropout</find>
+      <find>normali</find>
+      <find>bla</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/training.py" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/template/predict.html" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/templates/predict.html" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/templates/home.html" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/app.py" />
+        <option value="$PROJECT_DIR$/Wharton/CorporateFinance.py" />
+        <option value="$PROJECT_DIR$/unofficial_google_data_science/tmp.py" />
+        <option value="$PROJECT_DIR$/Redis/commands" />
+        <option value="$PROJECT_DIR$/Redis/Dockerfile" />
+        <option value="$PROJECT_DIR$/Redis/devops/redis.env" />
+        <option value="$PROJECT_DIR$/Redis/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/Redis/devops/entrypoint.sh" />
+        <option value="$PROJECT_DIR$/Redis/devops/Pipefile" />
+        <option value="$PROJECT_DIR$/Redis/devops/Pipefile.lock" />
+        <option value="$PROJECT_DIR$/Redis/app/__init__.py" />
+        <option value="$PROJECT_DIR$/Redis/app/cmds.py" />
+        <option value="$PROJECT_DIR$/Redis/app/config.py" />
+        <option value="$PROJECT_DIR$/Redis/app/jobs.py" />
+        <option value="$PROJECT_DIR$/Redis/app/routes.py" />
+        <option value="$PROJECT_DIR$/Redis/rq_config.py" />
+        <option value="$PROJECT_DIR$/Econ/bitcoin.md" />
+        <option value="$PROJECT_DIR$/Econ/TSLA.md" />
+        <option value="$PROJECT_DIR$/DeepLearning/basics.md" />
+        <option value="$PROJECT_DIR$/Econ/EconIndicators.md" />
+        <option value="$PROJECT_DIR$/Econ/test.py" />
+        <option value="$PROJECT_DIR$/Econ/AzureAppPlan.md" />
+        <option value="$PROJECT_DIR$/Econ/test.html" />
+        <option value="$PROJECT_DIR$/Econ/test_simple.html" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/home.html" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/templates/home.html" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/__init__.py" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/Dockercontent/Dockerfile" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/requirements.txt" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/Model.py" />
+        <option value="$PROJECT_DIR$/Econ/data_viewer.py" />
+        <option value="$PROJECT_DIR$/StackOverFlow/baguwen.md" />
+        <option value="$PROJECT_DIR$/Econ/Model.py" />
+        <option value="$PROJECT_DIR$/Econ/thoughts.md" />
+        <option value="$PROJECT_DIR$/Econ/test_fred.py" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/templates/simple_img.html" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/app.py" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/readme_original.md" />
+        <option value="$PROJECT_DIR$/DeployAppOnCloud/readme.md" />
+        <option value="$PROJECT_DIR$/SP500PredictorOnAzure/Dockerfile" />
+        <option value="$PROJECT_DIR$/HS_Datathon/test.py" />
+        <option value="$PROJECT_DIR$/Embedding/cluster_signal.py" />
+        <option value="$PROJECT_DIR$/Coinbase_intervial/test.py" />
+        <option value="$PROJECT_DIR$/Ranker/trans_data.py" />
+        <option value="$PROJECT_DIR$/Ranker/wgetdata.sh" />
+        <option value="$PROJECT_DIR$/venv3/pyvenv.cfg" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="104" />
+    <option name="y" value="27" />
+    <option name="width" value="1440" />
+    <option name="height" value="794" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Econ" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Probability_and_Statistics" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Ranker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="StackOverFlow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="unofficial_google_data_science" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Wharton" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Machine_Learning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Machine_Learning" type="462c0819:PsiDirectoryNode" />
+              <item name="Word_Embedding" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Ranker" />
+      <recent name="$PROJECT_DIR$/Coinbase_intervial" />
+      <recent name="$PROJECT_DIR$/Embedding" />
+      <recent name="$PROJECT_DIR$/Econ/intermediate_data" />
+      <recent name="$PROJECT_DIR$/Econ/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SP500PredictorOnAzure" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="app (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Machine_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/SP500PredictorOnAzure" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/SP500PredictorOnAzure/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cluster_signal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Machine_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Embedding" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Embedding/cluster_signal.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Machine_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/HS_Datathon" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HS_Datathon/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Machine_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Coinbase_intervial" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Coinbase_intervial/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_fred" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Machine_Learning" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Econ" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Econ/test_fred.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test_fred" />
+      <item itemvalue="Python.app (1)" />
+      <item itemvalue="Python.test (1)" />
+      <item itemvalue="Python.cluster_signal" />
+      <item itemvalue="Python.test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.cluster_signal" />
+        <item itemvalue="Python.test (1)" />
+        <item itemvalue="Python.app (1)" />
+        <item itemvalue="Python.test_fred" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f98790e5-7e52-4707-bae9-b7833cf778d9" name="Default Changelist" comment="" />
+      <created>1551718933843</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551718933843</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Designing A/B tests in a collaboration network">
+      <created>1551931652636</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1551931652636</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Figure A/B tests">
+      <created>1551931708966</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1551931708966</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Attributing a deep network’s prediction to its input features">
+      <created>1551932565240</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1551932565240</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Practical advice for analysis of large, complex data sets">
+      <created>1551980417618</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1551980417618</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Casual updates for unofficial">
+      <created>1552002454071</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1552002454071</updated>
+    </task>
+    <task id="LOCAL-00032" summary="26 articles, 1st round finished..">
+      <created>1552008524335</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1552008524335</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Linear regression...">
+      <created>1552024209886</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1552024209886</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Logistic regression">
+      <created>1552030216146</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1552030216146</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Anomaly detection - Andrew Ng">
+      <created>1552078189381</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1552078189381</updated>
+    </task>
+    <task id="LOCAL-00036" summary="EM alg">
+      <created>1552105786752</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1552105786752</updated>
+    </task>
+    <task id="LOCAL-00037" summary="crawl - optimization probl">
+      <created>1552110209376</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1552110209376</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Why RFECV fast">
+      <created>1552156203373</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1552156203373</updated>
+    </task>
+    <task id="LOCAL-00039" summary="General feature selections">
+      <created>1552156968951</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1552156968952</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Cover image">
+      <created>1552157107223</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1552157107223</updated>
+    </task>
+    <task id="LOCAL-00041" summary="A/B testing w/ special space (gcp network) and time (long-term)">
+      <created>1552174451400</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1552174451400</updated>
+    </task>
+    <task id="LOCAL-00042" summary="negative binomial">
+      <created>1552190957873</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1552190957873</updated>
+    </task>
+    <task id="LOCAL-00043" summary="f test and regression summary">
+      <created>1552198657119</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1552198657119</updated>
+    </task>
+    <task id="LOCAL-00044" summary="effective size calculator">
+      <created>1552200534724</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1552200534724</updated>
+    </task>
+    <task id="LOCAL-00045" summary="My favorite Beta function!">
+      <created>1552234176173</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1552234176173</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Stepwise feature selection, on the same dataset, can be problematic!">
+      <created>1552241584022</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1552241584022</updated>
+    </task>
+    <task id="LOCAL-00047" summary="simple order statistics">
+      <created>1552242260851</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1552242260851</updated>
+    </task>
+    <task id="LOCAL-00048" summary="all t tests">
+      <created>1552243449917</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1552243449917</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Simulate clone competitions">
+      <created>1552247288409</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1552247288409</updated>
+    </task>
+    <task id="LOCAL-00050" summary="qq + poisson regression">
+      <created>1552256068236</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1552256068237</updated>
+    </task>
+    <task id="LOCAL-00051" summary="misc">
+      <created>1552319777916</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1552319777916</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Adding understanding">
+      <created>1552323077472</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1552323077472</updated>
+    </task>
+    <task id="LOCAL-00053" summary="PCA for HIV">
+      <created>1552368901718</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1552368901718</updated>
+    </task>
+    <task id="LOCAL-00054" summary="PCA HIV fig">
+      <created>1552369151359</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1552369151359</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Credit card fraud init">
+      <created>1552450870771</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1552450870771</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Fraud detection - Dim Reduce">
+      <created>1552498144029</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1552498144029</updated>
+    </task>
+    <task id="LOCAL-00057" summary="LDA and unit test">
+      <created>1552545158881</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1552545158882</updated>
+    </task>
+    <task id="LOCAL-00058" summary="content-based CF and SVM hyperparameters">
+      <created>1552798195039</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1552798195040</updated>
+    </task>
+    <task id="LOCAL-00059" summary="CF">
+      <created>1552804413209</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1552804413209</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Kaggle old">
+      <created>1552847421822</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1552847421822</updated>
+    </task>
+    <task id="LOCAL-00061" summary="ECG_Biometric">
+      <created>1552847610868</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1552847610868</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Citadel Datathon">
+      <created>1552847754101</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1552847754101</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Use spotlight and patient_item to build RNN-based recommender system">
+      <created>1552859571159</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1552859571160</updated>
+    </task>
+    <task id="LOCAL-00064" summary="precision &amp; recall at k">
+      <created>1552865320086</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1552865320086</updated>
+    </task>
+    <task id="LOCAL-00065" summary="First run through of RNN recommender">
+      <created>1552867866278</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1552867866278</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Handle test data (0,4) and (4,12)">
+      <created>1553100193427</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1553100193428</updated>
+    </task>
+    <task id="LOCAL-00067" summary="average achieved_fraction: 44% (without permutation of training orders), not bad at all!">
+      <created>1553101571891</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1553101571891</updated>
+    </task>
+    <task id="LOCAL-00068" summary="A/B testing summary">
+      <created>1553795929430</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1553795929430</updated>
+    </task>
+    <task id="LOCAL-00069" summary="population diffusion, init">
+      <created>1553977541597</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1553977541597</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Flow_functions">
+      <created>1553982954943</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1553982954943</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Run for Qiu data">
+      <created>1554096108671</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1554096108671</updated>
+    </task>
+    <task id="LOCAL-00072" summary="understand the run_all output">
+      <created>1554267731205</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1554267731205</updated>
+    </task>
+    <task id="LOCAL-00073" summary="plot both potential and trajectory">
+      <created>1554321325012</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1554321325012</updated>
+    </task>
+    <task id="LOCAL-00074" summary="pair coding with xiaojie">
+      <created>1554591426465</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1554591426465</updated>
+    </task>
+    <task id="LOCAL-00075" summary="init DecisionTree">
+      <created>1572496676056</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1572496676056</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="104" y="27" width="1440" height="794" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30091614" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7850599" weight="0.35215452" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49964765" weight="0.32890856" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.794926" visible="true" weight="0.34918275" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.205074" side_tool="true" visible="true" weight="0.34918275" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32953367" />
+      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.cfg" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="misc" />
+    <MESSAGE value="Adding understanding" />
+    <MESSAGE value="PCA for HIV" />
+    <MESSAGE value="PCA HIV fig" />
+    <MESSAGE value="Credit card fraud init" />
+    <MESSAGE value="Fraud detection - Dim Reduce" />
+    <MESSAGE value="LDA and unit test" />
+    <MESSAGE value="content-based CF and SVM hyperparameters" />
+    <MESSAGE value="CF" />
+    <MESSAGE value="Kaggle old" />
+    <MESSAGE value="ECG_Biometric" />
+    <MESSAGE value="Citadel Datathon" />
+    <MESSAGE value="Use spotlight and patient_item to build RNN-based recommender system" />
+    <MESSAGE value="precision &amp; recall at k" />
+    <MESSAGE value="First run through of RNN recommender" />
+    <MESSAGE value="Handle test data (0,4) and (4,12)" />
+    <MESSAGE value="average achieved_fraction: 44% (without permutation of training orders), not bad at all!" />
+    <MESSAGE value="A/B testing summary" />
+    <MESSAGE value="population diffusion, init" />
+    <MESSAGE value="Flow_functions" />
+    <MESSAGE value="Run for Qiu data" />
+    <MESSAGE value="understand the run_all output" />
+    <MESSAGE value="plot both potential and trajectory" />
+    <MESSAGE value="pair coding with xiaojie" />
+    <MESSAGE value="init DecisionTree" />
+    <option name="LAST_COMMIT_MESSAGE" value="init DecisionTree" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Econ/AzureAppPlan.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="200">
+            <caret line="10" column="53" selection-start-line="10" selection-start-column="53" selection-end-line="10" selection-end-column="53" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/templates/predict.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="764">
+          <caret line="41" column="98" selection-start-line="41" selection-start-column="98" selection-end-line="41" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-41">
+          <caret line="10" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/home.html" />
+    <entry file="file://$PROJECT_DIR$/Econ/test_simple.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/Dockercontent/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/Dockercontent/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/Model.py" />
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/cpi.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/data/sp500_19600101_2021_0101.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/m1.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1979" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/gdp.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/baa.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/manual_data/WM1NS.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/manual_data/CPALTT01USM657N.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/manual_data/GDP.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/X.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-26040" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/y.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/sp.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2215">
+          <caret column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/EconIndicators.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="2" column="114" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="114" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="64" column="46" selection-start-line="64" selection-start-column="46" selection-end-line="64" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/intermediate_data/SP500.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/manual_data/SP500.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/thoughts.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="269">
+            <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/SP500_2020-12-15__2021-03-15.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/readme_original.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="340">
+            <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="180">
+            <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/training.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/test_fred.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="28" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StackOverFlow/baguwen.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="4365">
+            <caret line="291" selection-start-line="291" selection-end-line="292" selection-end-column="42" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DeployAppOnCloud/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SP500PredictorOnAzure/templates/simple_img.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Econ/data_viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="25" column="65" selection-start-line="25" selection-end-line="25" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HS_Datathon/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Embedding/cluster_signal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding>
+            <element signature="e#388#407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Coinbase_intervial/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ranker/trans_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/pip-selfcheck.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv3/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv3.9real/pyvenv.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ranker/wgetdata.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
