@@ -1,0 +1,1 @@
+| where property in ("NodeState","*NodeBugCheckFromRdAgent","*DirtyShutDownFromRdAgent","HostAgentVmStateV2","*DcmUnexpectedReboot","*BugCheck","NodeBeingRepaired","*DirtyShutDown","*BmcUpdate")

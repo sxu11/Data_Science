@@ -1,0 +1,3 @@
+RolloutHealthStatusWithBuildLabel
+| summarize min(PreciseTimeStamp), max(PreciseTimeStamp) by buildLabelPerSvc
+| where min_PreciseTimeStamp > ago(%dd)

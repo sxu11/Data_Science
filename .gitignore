@@ -1,3 +1,5 @@
 *.csv
 *.pyc
 venv/
+PercentileModel/.ipynb_checkpoints/
+.idea/

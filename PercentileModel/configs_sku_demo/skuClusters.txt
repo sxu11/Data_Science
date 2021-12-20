@@ -1,0 +1,5 @@
+cluster("AzureDcm").database("AzureDCMDb").dcmInventoryGenerationMappingV3
+| extend skuInfo=strcat(HwSkuId, "__", Generation)
+| summarize totCnt=dcount(NodeId), skuCnt=dcountif(NodeId, skuInfo=="%s") by ClusterId
+| extend rate=(skuCnt+0.0)/totCnt
+| where skuCnt > 0

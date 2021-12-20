@@ -1,0 +1,41 @@
+let buildLabel_ = \'{_buildLabel_}\';
+let intervalx = 1h;
+let maxTimePerbuildLabelPerSvc = RolloutHealthStatusWithBuildLabel
+| where clusterName in ({_clusterNames_})
+| where buildLabelPerSvc == buildLabel_
+| summarize maxTime = arg_max(PreciseTimeStamp, *) by buildLabelPerSvc
+| project buildLabelPerSvc, maxTime;
+let HSMonitoredCountsTillNow = RolloutHealthStatusWithBuildLabel
+| where clusterName in ({_clusterNames_})
+| where buildLabelPerSvc == buildLabel_
+| join kind=leftouter maxTimePerbuildLabelPerSvc on $left.buildLabelPerSvc == $right.buildLabelPerSvc
+| extend nodeMessage = iff(message !contains "node", "", tostring(split(message ,"node, FailedTargetCount:")[1]))
+| extend MonitoredNodeCount = iff(isempty(nodeMessage), 0 , toint(split(tostring(split(nodeMessage ,":")[1]),"]")[0]))
+| extend interval = bin(PreciseTimeStamp, intervalx)
+| summarize arg_max(PreciseTimeStamp,*) by rolloutId, interval, buildLabelPerSvc, maxTime
+| extend TillTime = range(interval, maxTime, intervalx)
+| mv-expand TillTime to typeof(datetime)
+| summarize arg_max(MonitoredNodeCount, *) by TillTime, rolloutId, buildLabelPerSvc
+| where rolloutId !contains "rollback"
+| summarize totalMonitoredNode = sum(MonitoredNodeCount) by TillTime, buildLabelPerSvc
+| project buildLabelPerSvc, totalMonitoredNode, TillTime;
+let HSRegressionCountsEachInterval = FormattedRegressedConditionDetailsWithBuildLabel
+| where clusterName in ({_clusterNames_}) and targetType == "node"
+{_signalFilters_}
+| where buildLabelPerSvc  == buildLabel_
+| extend interval = bin(PreciseTimeStamp, intervalx)
+| summarize arg_min(interval, *) by targetId, clusterName, rolloutId
+| where rolloutId !contains "rollback"
+| summarize regressedCount = dcount(targetId) by interval, clusterName, buildLabelPerSvc;
+let RegressionCountsTillNow = HSRegressionCountsEachInterval
+| join kind=leftouter maxTimePerbuildLabelPerSvc on $left.buildLabelPerSvc == $right.buildLabelPerSvc
+| extend TillTime = range(interval, maxTime, intervalx)
+| mv-expand TillTime to typeof(datetime)
+| summarize totalRegressedCount = sum(regressedCount), regressedClusterCount = dcount(clusterName) by TillTime, buildLabelPerSvc
+| project buildLabelPerSvc, totalRegressedCount, regressedClusterCount, TillTime;
+HSMonitoredCountsTillNow
+| join kind=leftouter RegressionCountsTillNow on $left.buildLabelPerSvc == $right.buildLabelPerSvc, $left.TillTime == $right.TillTime
+| sort by TillTime asc
+| extend totalRegressedCount = iff(isempty(totalRegressedCount), 0, totalRegressedCount)
+| extend regressedClusterCount = iff(isempty(regressedClusterCount), 0, regressedClusterCount)
+| project buildLabelPerSvc, totalMonitoredNode, totalRegressedCount, regressedClusterCount, TillTime
